@@ -65,13 +65,53 @@ export default function Index() {
   const [date, setDate] = useState<Date | undefined>(new Date());
   const [selectedRoom, setSelectedRoom] = useState<string>('');
   const [selectedTime, setSelectedTime] = useState<string>('');
+  const [name, setName] = useState<string>('');
+  const [phone, setPhone] = useState<string>('');
+  const [comment, setComment] = useState<string>('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleBooking = () => {
-    if (!selectedRoom || !selectedTime || !date) {
-      alert('Пожалуйста, выберите кабинет, дату и время');
+  const handleBooking = async () => {
+    if (!selectedRoom || !selectedTime || !date || !name || !phone) {
+      alert('Пожалуйста, заполните все обязательные поля');
       return;
     }
-    alert(`Бронирование отправлено!\nКабинет: ${selectedRoom}\nДата: ${date.toLocaleDateString('ru-RU')}\nВремя: ${selectedTime}`);
+
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('https://functions.poehali.dev/f59920c7-74d6-4e57-aa7b-365595d411cc', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          room: selectedRoom,
+          date: date.toLocaleDateString('ru-RU'),
+          time: selectedTime,
+          name,
+          phone,
+          comment
+        })
+      });
+
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        alert('✅ Бронирование успешно отправлено! Мы свяжемся с вами в ближайшее время.');
+        setSelectedRoom('');
+        setSelectedTime('');
+        setName('');
+        setPhone('');
+        setComment('');
+        setDate(new Date());
+      } else {
+        alert('❌ Ошибка при отправке. Попробуйте позже или позвоните нам.');
+      }
+    } catch (error) {
+      alert('❌ Ошибка соединения. Проверьте интернет и попробуйте снова.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -244,22 +284,22 @@ export default function Index() {
 
                 <div>
                   <Label htmlFor="name" className="text-base mb-2 block">Ваше имя</Label>
-                  <Input id="name" placeholder="Имя" />
+                  <Input id="name" placeholder="Имя" value={name} onChange={(e) => setName(e.target.value)} />
                 </div>
 
                 <div>
                   <Label htmlFor="phone" className="text-base mb-2 block">Телефон</Label>
-                  <Input id="phone" type="tel" placeholder="+7 (___) ___-__-__" />
+                  <Input id="phone" type="tel" placeholder="+7 (___) ___-__-__" value={phone} onChange={(e) => setPhone(e.target.value)} />
                 </div>
 
                 <div>
                   <Label htmlFor="comment" className="text-base mb-2 block">Комментарий</Label>
-                  <Textarea id="comment" placeholder="Дополнительная информация..." rows={3} />
+                  <Textarea id="comment" placeholder="Дополнительная информация..." rows={3} value={comment} onChange={(e) => setComment(e.target.value)} />
                 </div>
 
-                <Button className="w-full" size="lg" onClick={handleBooking}>
+                <Button className="w-full" size="lg" onClick={handleBooking} disabled={isSubmitting}>
                   <Icon name="Send" size={18} className="mr-2" />
-                  Отправить заявку
+                  {isSubmitting ? 'Отправка...' : 'Отправить заявку'}
                 </Button>
               </div>
             </div>

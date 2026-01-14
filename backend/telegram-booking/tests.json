@@ -1,0 +1,22 @@
+{
+  "tests": [
+    {
+      "name": "Test booking notification",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "room": "Кабинет №1 - Массаж",
+        "date": "15.01.2026",
+        "time": "14:00",
+        "name": "Иван Петров",
+        "phone": "+7 (999) 123-45-67",
+        "comment": "Первое посещение"
+      },
+      "expectedStatus": 200,
+      "expectedBody": {
+        "success": true
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}
