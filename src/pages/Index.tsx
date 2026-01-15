@@ -391,7 +391,7 @@ export default function Index() {
                   <Icon name="Phone" className="text-primary mt-1" size={20} />
                   <div>
                     <p className="font-medium">Телефон</p>
-                    <p className="text-muted-foreground">+7 (495) 123-45-67</p>
+                    <a href="tel:+79397325270" className="text-muted-foreground hover:text-primary transition-colors">+7 (939) 732-52-70</a>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -418,26 +418,19 @@ export default function Index() {
               </div>
             </Card>
 
-            <Card className="p-6">
-              <h3 className="text-xl font-semibold mb-6">Напишите нам</h3>
-              <form className="space-y-4">
-                <div>
-                  <Label htmlFor="contact-name">Имя</Label>
-                  <Input id="contact-name" placeholder="Ваше имя" />
-                </div>
-                <div>
-                  <Label htmlFor="contact-email">Email</Label>
-                  <Input id="contact-email" type="email" placeholder="your@email.com" />
-                </div>
-                <div>
-                  <Label htmlFor="contact-message">Сообщение</Label>
-                  <Textarea id="contact-message" placeholder="Ваше сообщение..." rows={4} />
-                </div>
-                <Button className="w-full">
-                  <Icon name="Send" size={18} className="mr-2" />
-                  Отправить
-                </Button>
-              </form>
+            <Card className="p-6 overflow-hidden">
+              <h3 className="text-xl font-semibold mb-6">Мы на карте</h3>
+              <div className="relative w-full h-[400px] rounded-lg overflow-hidden">
+                <iframe
+                  src="https://yandex.ru/map-widget/v1/?ll=49.176855%2C55.822182&z=17&l=map&pt=49.176855,55.822182,pm2rdm"
+                  width="100%"
+                  height="100%"
+                  frameBorder="0"
+                  allowFullScreen
+                  style={{ position: 'relative' }}
+                  className="rounded-lg"
+                />
+              </div>
             </Card>
           </div>
         </div>
