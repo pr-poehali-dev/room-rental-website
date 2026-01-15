@@ -422,7 +422,7 @@ export default function Index() {
               <h3 className="text-xl font-semibold mb-6">Мы на карте</h3>
               <div className="relative w-full h-[400px] rounded-lg overflow-hidden">
                 <iframe
-                  src="https://yandex.ru/map-widget/v1/?ll=49.176855%2C55.822182&z=17&l=map&pt=49.176855,55.822182,pm2rdm"
+                  src="https://yandex.ru/map-widget/v1/?ll=49.176856%2C55.805893&z=17&l=map&pt=49.176856,55.805893,pm2rdm"
                   width="100%"
                   height="100%"
                   frameBorder="0"
