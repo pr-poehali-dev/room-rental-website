@@ -405,7 +405,7 @@ export default function Index() {
                   <Icon name="MapPin" className="text-primary mt-1" size={20} />
                   <div>
                     <p className="font-medium">Адрес</p>
-                    <p className="text-muted-foreground">г. Москва, ул. Примерная, д. 10</p>
+                    <p className="text-muted-foreground">г. Казань, ул. Чистопольская, д. 61Б</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
