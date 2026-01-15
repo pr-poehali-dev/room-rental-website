@@ -383,56 +383,39 @@ export default function Index() {
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Контакты</h2>
           <p className="text-center text-muted-foreground mb-12">Свяжитесь с нами удобным способом</p>
           
-          <div className="grid md:grid-cols-2 gap-8">
-            <Card className="p-6">
-              <h3 className="text-xl font-semibold mb-6">Наши контакты</h3>
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <Icon name="Phone" className="text-primary mt-1" size={20} />
-                  <div>
-                    <p className="font-medium">Телефон</p>
-                    <a href="tel:+79397325270" className="text-muted-foreground hover:text-primary transition-colors">+7 (939) 732-52-70</a>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <Icon name="Mail" className="text-primary mt-1" size={20} />
-                  <div>
-                    <p className="font-medium">Email</p>
-                    <p className="text-muted-foreground">info@cabinet-rent.ru</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <Icon name="MapPin" className="text-primary mt-1" size={20} />
-                  <div>
-                    <p className="font-medium">Адрес</p>
-                    <p className="text-muted-foreground">г. Казань, ул. Чистопольская, д. 61Б</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <Icon name="Clock" className="text-primary mt-1" size={20} />
-                  <div>
-                    <p className="font-medium">Режим работы</p>
-                    <p className="text-muted-foreground">Ежедневно с 9:00 до 21:00</p>
-                  </div>
+          <Card className="p-6 max-w-2xl mx-auto">
+            <h3 className="text-xl font-semibold mb-6">Наши контакты</h3>
+            <div className="space-y-4">
+              <div className="flex items-start gap-3">
+                <Icon name="Phone" className="text-primary mt-1" size={20} />
+                <div>
+                  <p className="font-medium">Телефон</p>
+                  <a href="tel:+79397325270" className="text-muted-foreground hover:text-primary transition-colors">+7 (939) 732-52-70</a>
                 </div>
               </div>
-            </Card>
-
-            <Card className="p-6 overflow-hidden">
-              <h3 className="text-xl font-semibold mb-6">Мы на карте</h3>
-              <div className="relative w-full h-[400px] rounded-lg overflow-hidden">
-                <iframe
-                  src="https://yandex.ru/map-widget/v1/?ll=49.176856%2C55.805893&z=17&l=map&pt=49.176856,55.805893,pm2rdm"
-                  width="100%"
-                  height="100%"
-                  frameBorder="0"
-                  allowFullScreen
-                  style={{ position: 'relative' }}
-                  className="rounded-lg"
-                />
+              <div className="flex items-start gap-3">
+                <Icon name="Mail" className="text-primary mt-1" size={20} />
+                <div>
+                  <p className="font-medium">Email</p>
+                  <p className="text-muted-foreground">info@cabinet-rent.ru</p>
+                </div>
               </div>
-            </Card>
-          </div>
+              <div className="flex items-start gap-3">
+                <Icon name="MapPin" className="text-primary mt-1" size={20} />
+                <div>
+                  <p className="font-medium">Адрес</p>
+                  <p className="text-muted-foreground">г. Казань, ул. Чистопольская, д. 61Б</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <Icon name="Clock" className="text-primary mt-1" size={20} />
+                <div>
+                  <p className="font-medium">Режим работы</p>
+                  <p className="text-muted-foreground">Ежедневно с 9:00 до 21:00</p>
+                </div>
+              </div>
+            </div>
+          </Card>
         </div>
       </section>
 
