@@ -142,7 +142,7 @@ export default function Index() {
             Профессиональные кабинеты для специалистов
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            Уютное пространство для массажистов, психологов и логопедов. Почасовая аренда, всё включено.
+            Уютное пространство. Почасовая аренда. Всё включено.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="text-lg" onClick={() => document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })}>
