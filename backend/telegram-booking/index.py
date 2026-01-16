@@ -3,9 +3,33 @@ import os
 from datetime import datetime
 import urllib.request
 import urllib.error
+import psycopg2
+
+def save_booking_to_db(room: str, date: str, time: str, name: str, phone: str, comment: str) -> bool:
+    '''Сохранение бронирования в базу данных'''
+    try:
+        db_url = os.environ.get('DATABASE_URL')
+        if not db_url:
+            return False
+        
+        conn = psycopg2.connect(db_url)
+        cursor = conn.cursor()
+        
+        cursor.execute(
+            "INSERT INTO bookings (room_name, booking_date, booking_time, client_name, client_phone, comment) VALUES (%s, %s, %s, %s, %s, %s)",
+            (room, date, time, name, phone, comment)
+        )
+        
+        conn.commit()
+        cursor.close()
+        conn.close()
+        return True
+    except Exception as e:
+        print(f"Database error: {e}")
+        return False
 
 def handler(event: dict, context) -> dict:
-    '''Отправка уведомления о бронировании кабинета в Telegram'''
+    '''Отправка уведомления о бронировании кабинета в Telegram и сохранение в БД'''
     
     method = event.get('httpMethod', 'POST')
     
@@ -33,16 +57,6 @@ def handler(event: dict, context) -> dict:
     bot_token = os.environ.get('TELEGRAM_BOT_TOKEN')
     chat_id = os.environ.get('TELEGRAM_CHAT_ID')
     
-    if not bot_token or not chat_id:
-        return {
-            'statusCode': 500,
-            'headers': {
-                'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*'
-            },
-            'body': json.dumps({'error': 'Telegram credentials not configured'})
-        }
-    
     try:
         data = json.loads(event.get('body', '{}'))
     except json.JSONDecodeError:
@@ -61,6 +75,25 @@ def handler(event: dict, context) -> dict:
     name = data.get('name', 'Не указано')
     phone = data.get('phone', 'Не указан')
     comment = data.get('comment', '')
+    
+    # Сохранение бронирования в базу данных
+    db_saved = save_booking_to_db(room, date, time, name, phone, comment)
+    
+    # Если Telegram не настроен, возвращаем успех с сохранением в БД
+    if not bot_token or not chat_id:
+        return {
+            'statusCode': 200,
+            'headers': {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*'
+            },
+            'body': json.dumps({
+                'success': True,
+                'db_saved': db_saved,
+                'telegram_sent': False,
+                'message': 'Booking saved to database'
+            })
+        }
     
     message = f"""🏥 Новое бронирование кабинета!
 
@@ -100,34 +133,55 @@ def handler(event: dict, context) -> dict:
                         'Content-Type': 'application/json',
                         'Access-Control-Allow-Origin': '*'
                     },
-                    'body': json.dumps({'success': True, 'message': 'Booking sent to Telegram'})
+                    'body': json.dumps({
+                        'success': True, 
+                        'telegram_sent': True,
+                        'db_saved': db_saved,
+                        'message': 'Booking saved and sent to Telegram'
+                    })
                 }
             else:
                 return {
-                    'statusCode': 500,
+                    'statusCode': 200,
                     'headers': {
                         'Content-Type': 'application/json',
                         'Access-Control-Allow-Origin': '*'
                     },
-                    'body': json.dumps({'error': 'Telegram API error', 'details': result})
+                    'body': json.dumps({
+                        'success': True,
+                        'db_saved': db_saved,
+                        'telegram_sent': False,
+                        'telegram_error': result,
+                        'message': 'Booking saved to database, Telegram notification failed'
+                    })
                 }
     
     except urllib.error.HTTPError as e:
         error_body = e.read().decode('utf-8')
         return {
-            'statusCode': 500,
+            'statusCode': 200,
             'headers': {
                 'Content-Type': 'application/json',
                 'Access-Control-Allow-Origin': '*'
             },
-            'body': json.dumps({'error': f'HTTP Error: {e.code}', 'details': error_body})
+            'body': json.dumps({
+                'success': True,
+                'db_saved': db_saved,
+                'telegram_sent': False,
+                'message': 'Booking saved to database, Telegram notification failed'
+            })
         }
     except Exception as e:
         return {
-            'statusCode': 500,
+            'statusCode': 200,
             'headers': {
                 'Content-Type': 'application/json',
                 'Access-Control-Allow-Origin': '*'
             },
-            'body': json.dumps({'error': str(e)})
+            'body': json.dumps({
+                'success': True,
+                'db_saved': db_saved,
+                'telegram_sent': False,
+                'message': 'Booking saved to database, Telegram notification failed'
+            })
         }
