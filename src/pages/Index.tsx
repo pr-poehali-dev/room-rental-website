@@ -1,11 +1,5 @@
-import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Calendar } from '@/components/ui/calendar';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Textarea } from '@/components/ui/textarea';
 import Icon from '@/components/ui/icon';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
@@ -62,57 +56,6 @@ const testimonials = [
 ];
 
 export default function Index() {
-  const [date, setDate] = useState<Date | undefined>(new Date());
-  const [selectedRoom, setSelectedRoom] = useState<string>('');
-  const [selectedTime, setSelectedTime] = useState<string>('');
-  const [name, setName] = useState<string>('');
-  const [phone, setPhone] = useState<string>('');
-  const [comment, setComment] = useState<string>('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleBooking = async () => {
-    if (!selectedRoom || !selectedTime || !date || !name || !phone) {
-      alert('Пожалуйста, заполните все обязательные поля');
-      return;
-    }
-
-    setIsSubmitting(true);
-
-    try {
-      const response = await fetch('https://functions.poehali.dev/f59920c7-74d6-4e57-aa7b-365595d411cc', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          room: selectedRoom,
-          date: date.toLocaleDateString('ru-RU'),
-          time: selectedTime,
-          name,
-          phone,
-          comment
-        })
-      });
-
-      const result = await response.json();
-
-      if (response.ok && result.success) {
-        alert('✅ Бронирование успешно отправлено! Мы свяжемся с вами в ближайшее время.');
-        setSelectedRoom('');
-        setSelectedTime('');
-        setName('');
-        setPhone('');
-        setComment('');
-        setDate(new Date());
-      } else {
-        alert('❌ Ошибка при отправке. Попробуйте позже или позвоните нам.');
-      }
-    } catch (error) {
-      alert('❌ Ошибка соединения. Проверьте интернет и попробуйте снова.');
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
 
   return (
     <div className="min-h-screen">
@@ -220,11 +163,10 @@ export default function Index() {
                   </ul>
                   <div className="flex items-center justify-between">
                     <span className="text-2xl font-bold text-primary">{room.price}</span>
-                    <Button onClick={() => {
-                      setSelectedRoom(room.name);
-                      document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' });
-                    }}>
-                      Забронировать
+                    <Button asChild>
+                      <a href="https://n1950266.yclients.com" target="_blank" rel="noopener noreferrer">
+                        Забронировать
+                      </a>
                     </Button>
                   </div>
                 </CardContent>
@@ -234,20 +176,7 @@ export default function Index() {
         </div>
       </section>
 
-      <section id="booking" className="py-20 px-4 bg-muted/30">
-        <div className="container max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Бронирование</h2>
-          <p className="text-center text-muted-foreground mb-12">Выберите удобное время и забронируйте кабинет онлайн</p>
-          
-          <Card className="p-2 md:p-6">
-            <iframe 
-              src="https://n1950266.yclients.com" 
-              className="w-full h-[800px] md:h-[900px] border-0 rounded-lg"
-              title="Онлайн-запись YClients"
-            />
-          </Card>
-        </div>
-      </section>
+
 
       <section id="gallery" className="py-20 px-4">
         <div className="container max-w-6xl mx-auto">
