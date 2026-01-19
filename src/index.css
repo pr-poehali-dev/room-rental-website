@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -6,33 +6,33 @@
 
 @layer base {
   :root {
-    --background: 35 40% 97%;
-    --foreground: 28 25% 20%;
+    --background: 120 25% 97%;
+    --foreground: 150 30% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 28 25% 20%;
+    --card-foreground: 150 30% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 28 25% 20%;
+    --popover-foreground: 150 30% 15%;
 
-    --primary: 12 45% 60%;
+    --primary: 145 45% 50%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 35 25% 85%;
-    --secondary-foreground: 28 25% 20%;
+    --secondary: 40 35% 75%;
+    --secondary-foreground: 150 30% 15%;
 
-    --muted: 35 30% 92%;
-    --muted-foreground: 28 15% 50%;
+    --muted: 120 15% 93%;
+    --muted-foreground: 150 15% 45%;
 
-    --accent: 90 20% 60%;
-    --accent-foreground: 28 25% 20%;
+    --accent: 150 40% 55%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 35 25% 88%;
-    --input: 35 25% 88%;
-    --ring: 12 45% 60%;
+    --border: 120 20% 88%;
+    --input: 120 20% 90%;
+    --ring: 145 45% 50%;
 
     --radius: 0.75rem;
 
@@ -99,7 +99,7 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Inter", sans-serif;
   }
 
   h1,
@@ -108,6 +108,6 @@
   h4,
   h5,
   h6 {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Playfair Display", serif;
   }
 }

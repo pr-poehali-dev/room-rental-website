@@ -139,10 +139,10 @@ export default function Index() {
         </div>
       </header>
 
-      <section className="py-20 px-4 bg-gradient-to-b from-background to-muted/30">
+      <section className="py-20 px-4 bg-gradient-to-b from-background via-green-50/30 to-amber-50/20">
         <div className="container max-w-6xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in">
-            Mind Bloom — Профессиональные кабинеты для психологов
+          <h1 className="text-3xl md:text-5xl font-bold mb-6 animate-fade-in">
+            Mind Bloom — Пространство для психологов
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
             Уютное пространство для консультаций. Почасовая аренда. Всё включено.
@@ -159,7 +159,7 @@ export default function Index() {
         </div>
       </section>
 
-      <section className="py-16 px-4 bg-accent/20">
+      <section className="py-16 px-4 bg-gradient-to-br from-green-50/40 to-amber-50/30">
         <div className="container max-w-6xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div className="flex flex-col items-center gap-3">
@@ -357,7 +357,7 @@ export default function Index() {
         </div>
       </section>
 
-      <section id="reviews" className="py-20 px-4 bg-muted/30">
+      <section id="reviews" className="py-20 px-4 bg-gradient-to-br from-amber-50/30 to-green-50/40">
         <div className="container max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Отзывы</h2>
           <p className="text-center text-muted-foreground mb-12">Что говорят наши клиенты</p>
@@ -422,7 +422,7 @@ export default function Index() {
         </div>
       </section>
 
-      <footer className="py-8 px-4 border-t bg-muted/20">
+      <footer className="py-8 px-4 border-t bg-gradient-to-r from-green-50/30 to-amber-50/30">
         <div className="container max-w-6xl mx-auto text-center text-muted-foreground">
           <p>© 2024 Mind Bloom. Все права защищены.</p>
         </div>
