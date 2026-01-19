@@ -235,77 +235,16 @@ export default function Index() {
       </section>
 
       <section id="booking" className="py-20 px-4 bg-muted/30">
-        <div className="container max-w-4xl mx-auto">
+        <div className="container max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Бронирование</h2>
-          <p className="text-center text-muted-foreground mb-12">Выберите удобное время и дату</p>
+          <p className="text-center text-muted-foreground mb-12">Выберите удобное время и забронируйте кабинет онлайн</p>
           
-          <Card className="p-6">
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <Label className="text-base mb-3 block">Выберите дату</Label>
-                <Calendar
-                  mode="single"
-                  selected={date}
-                  onSelect={setDate}
-                  className="rounded-md border mx-auto"
-                  disabled={(date) => date < new Date()}
-                />
-              </div>
-              
-              <div className="space-y-6">
-                <div>
-                  <Label htmlFor="room" className="text-base mb-2 block">Выберите кабинет</Label>
-                  <Select value={selectedRoom} onValueChange={setSelectedRoom}>
-                    <SelectTrigger id="room">
-                      <SelectValue placeholder="Кабинет..." />
-                    </SelectTrigger>
-                    <SelectContent>
-                      {rooms.map((room) => (
-                        <SelectItem key={room.id} value={room.name}>
-                          {room.name} - {room.price}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
-                </div>
-
-                <div>
-                  <Label htmlFor="time" className="text-base mb-2 block">Выберите время</Label>
-                  <Select value={selectedTime} onValueChange={setSelectedTime}>
-                    <SelectTrigger id="time">
-                      <SelectValue placeholder="Время..." />
-                    </SelectTrigger>
-                    <SelectContent>
-                      {timeSlots.map((time) => (
-                        <SelectItem key={time} value={time}>
-                          {time}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
-                </div>
-
-                <div>
-                  <Label htmlFor="name" className="text-base mb-2 block">Ваше имя</Label>
-                  <Input id="name" placeholder="Имя" value={name} onChange={(e) => setName(e.target.value)} />
-                </div>
-
-                <div>
-                  <Label htmlFor="phone" className="text-base mb-2 block">Телефон</Label>
-                  <Input id="phone" type="tel" placeholder="+7 (___) ___-__-__" value={phone} onChange={(e) => setPhone(e.target.value)} />
-                </div>
-
-                <div>
-                  <Label htmlFor="comment" className="text-base mb-2 block">Комментарий</Label>
-                  <Textarea id="comment" placeholder="Дополнительная информация..." rows={3} value={comment} onChange={(e) => setComment(e.target.value)} />
-                </div>
-
-                <Button className="w-full" size="lg" onClick={handleBooking} disabled={isSubmitting}>
-                  <Icon name="Send" size={18} className="mr-2" />
-                  {isSubmitting ? 'Отправка...' : 'Отправить заявку'}
-                </Button>
-              </div>
-            </div>
+          <Card className="p-2 md:p-6">
+            <iframe 
+              src="https://n1950266.yclients.com" 
+              className="w-full h-[800px] md:h-[900px] border-0 rounded-lg"
+              title="Онлайн-запись YClients"
+            />
           </Card>
         </div>
       </section>
