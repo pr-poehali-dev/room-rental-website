@@ -422,9 +422,35 @@ export default function Index() {
         </div>
       </section>
 
-      <footer className="py-8 px-4 border-t bg-gradient-to-r from-green-50/30 to-amber-50/30">
-        <div className="container max-w-6xl mx-auto text-center text-muted-foreground">
-          <p>© 2026 Mind Bloom. Все права защищены.</p>
+      <footer className="py-12 px-4 border-t bg-gradient-to-r from-green-50/30 to-amber-50/30">
+        <div className="container max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 mb-8">
+            <div>
+              <h3 className="font-semibold text-lg mb-4">Mind Bloom</h3>
+              <p className="text-sm text-muted-foreground">Аренда кабинетов для психологов в Казани</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-lg mb-4">Документы</h3>
+              <ul className="space-y-2 text-sm">
+                <li><a href="/privacy" className="text-muted-foreground hover:text-primary transition-colors">Политика конфиденциальности</a></li>
+                <li><a href="/terms" className="text-muted-foreground hover:text-primary transition-colors">Пользовательское соглашение</a></li>
+                <li><a href="/offer" className="text-muted-foreground hover:text-primary transition-colors">Договор оферты</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-semibold text-lg mb-4">Контакты</h3>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                <li>+7 (999) 999-99-99</li>
+                <li>info@mindbloom.ru</li>
+                <li>г. Казань, ул. Чистопольская, 61Б</li>
+              </ul>
+            </div>
+          </div>
+          <div className="border-t pt-6 text-center text-sm text-muted-foreground">
+            <p className="mb-2">ИП Ситдигуллина Алиса Айратовна</p>
+            <p>ИНН: 165126369283 | ОГРНИП: 324169000045985</p>
+            <p className="mt-2">Юридический адрес: 420081, Россия, Республика Татарстан, г. Казань, ул. Патриса Лумумбы, д. 28Б</p>
+          </div>
         </div>
       </footer>
     </div>
