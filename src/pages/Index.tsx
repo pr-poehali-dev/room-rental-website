@@ -424,7 +424,7 @@ export default function Index() {
 
       <footer className="py-8 px-4 border-t bg-gradient-to-r from-green-50/30 to-amber-50/30">
         <div className="container max-w-6xl mx-auto text-center text-muted-foreground">
-          <p>© 2024 Mind Bloom. Все права защищены.</p>
+          <p>© 2026 Mind Bloom. Все права защищены.</p>
         </div>
       </footer>
     </div>
