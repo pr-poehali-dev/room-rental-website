@@ -118,9 +118,12 @@ export default function Index() {
     <div className="min-h-screen">
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Icon name="Home" className="text-primary" size={28} />
-            <span className="text-xl font-semibold">Кабинеты в аренду</span>
+          <div className="flex items-center gap-3">
+            <img 
+              src="https://cdn.poehali.dev/files/логотип MB.png" 
+              alt="Mind Bloom" 
+              className="h-12 w-auto"
+            />
           </div>
           <nav className="hidden md:flex gap-6">
             <a href="#rooms" className="text-sm font-medium hover:text-primary transition-colors">Кабинеты</a>
@@ -139,10 +142,10 @@ export default function Index() {
       <section className="py-20 px-4 bg-gradient-to-b from-background to-muted/30">
         <div className="container max-w-6xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in">
-            Профессиональные кабинеты для специалистов
+            Mind Bloom — Профессиональные кабинеты для психологов
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            Уютное пространство. Почасовая аренда. Всё включено.
+            Уютное пространство для консультаций. Почасовая аренда. Всё включено.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="text-lg" onClick={() => document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })}>
@@ -421,7 +424,7 @@ export default function Index() {
 
       <footer className="py-8 px-4 border-t bg-muted/20">
         <div className="container max-w-6xl mx-auto text-center text-muted-foreground">
-          <p>© 2024 Кабинеты в аренду. Все права защищены.</p>
+          <p>© 2024 Mind Bloom. Все права защищены.</p>
         </div>
       </footer>
     </div>
