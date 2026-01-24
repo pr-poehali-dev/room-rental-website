@@ -10,7 +10,7 @@ const rooms = [
     description: 'Просторный кабинет с массажным столом, мягким освещением и расслабляющей атмосферой.',
     image: 'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/files/b3fadf66-3dc6-4f9e-9a0f-7bc97af10196.jpg',
     features: ['Массажный стол', 'Кондиционер', 'Звукоизоляция', 'Санузел'],
-    price: '1500 ₽/час'
+    price: '500 ₽/час'
   },
   {
     id: 2,
