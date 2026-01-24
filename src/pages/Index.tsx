@@ -18,7 +18,7 @@ const rooms = [
     description: 'Уютное пространство для психологических консультаций с комфортной мебелью.',
     image: 'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/files/65ef026a-8662-4e0c-8423-f4c82e9c965c.jpg',
     features: ['Диван и кресла', 'Рабочий стол', 'Wi-Fi', 'Кондиционер'],
-    price: '1200 ₽/час'
+    price: '500 ₽/час'
   },
   {
     id: 3,
@@ -26,7 +26,7 @@ const rooms = [
     description: 'Светлый кабинет для работы с детьми, оборудованный игровой зоной.',
     image: 'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/files/34cb1d8b-cb9a-4237-ae2e-7baaad0187c1.jpg',
     features: ['Игровая зона', 'Мебель для детей', 'Материалы для творчества', 'Безопасное пространство'],
-    price: '1300 ₽/час'
+    price: '500 ₽/час'
   }
 ];
 
@@ -161,9 +161,9 @@ export default function Index() {
                       </li>
                     ))}
                   </ul>
-                  <div className="flex items-center justify-between">
+                  <div className="flex flex-col gap-3">
                     <span className="text-2xl font-bold text-primary">{room.price}</span>
-                    <Button asChild>
+                    <Button asChild className="w-full">
                       <a href="https://n1950266.yclients.com" target="_blank" rel="noopener noreferrer">
                         Забронировать
                       </a>
