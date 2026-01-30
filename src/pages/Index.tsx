@@ -268,7 +268,7 @@ export default function Index() {
                 <Icon name="Mail" className="text-primary mt-1" size={20} />
                 <div>
                   <p className="font-medium">Email</p>
-                  <p className="text-muted-foreground">info@cabinet-rent.ru</p>
+                  <a href="mailto:mind-bloom@ya.ru" className="text-muted-foreground hover:text-primary transition-colors">mind-bloom@ya.ru</a>
                 </div>
               </div>
               <div className="flex items-start gap-3">
