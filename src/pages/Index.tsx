@@ -75,9 +75,9 @@ export default function Index() {
             <a href="#reviews" className="text-sm font-medium hover:text-primary transition-colors">Отзывы</a>
             <a href="#contacts" className="text-sm font-medium hover:text-primary transition-colors">Контакты</a>
           </nav>
-          <Button className="hidden md:flex">
-            <Icon name="Phone" size={18} className="mr-2" />
-            Позвонить
+          <Button className="hidden md:flex" onClick={() => document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })}>
+            <Icon name="Calendar" size={18} className="mr-2" />
+            Забронировать
           </Button>
         </div>
       </header>
