@@ -70,14 +70,16 @@ export default function Index() {
           </div>
           <nav className="hidden md:flex gap-6">
             <a href="#rooms" className="text-sm font-medium hover:text-primary transition-colors">Кабинеты</a>
-            <a href="#booking" className="text-sm font-medium hover:text-primary transition-colors">Бронирование</a>
+            <a href="#contacts" className="text-sm font-medium hover:text-primary transition-colors">Контакты</a>
             <a href="#gallery" className="text-sm font-medium hover:text-primary transition-colors">Галерея</a>
             <a href="#reviews" className="text-sm font-medium hover:text-primary transition-colors">Отзывы</a>
             <a href="#contacts" className="text-sm font-medium hover:text-primary transition-colors">Контакты</a>
           </nav>
-          <Button className="hidden md:flex" onClick={() => document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })}>
-            <Icon name="Calendar" size={18} className="mr-2" />
-            Забронировать
+          <Button className="hidden md:flex" asChild>
+            <a href="tel:+79397325270">
+              <Icon name="Phone" size={18} className="mr-2" />
+              Позвонить
+            </a>
           </Button>
         </div>
       </header>
@@ -91,9 +93,11 @@ export default function Index() {
             Уютное пространство для консультаций. Почасовая аренда. Всё включено.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="text-lg" onClick={() => document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })}>
-              <Icon name="Calendar" size={20} className="mr-2" />
-              Забронировать
+            <Button size="lg" className="text-lg" asChild>
+              <a href="tel:+79397325270">
+                <Icon name="Phone" size={20} className="mr-2" />
+                Забронировать
+              </a>
             </Button>
             <Button size="lg" variant="outline" className="text-lg" onClick={() => document.getElementById('rooms')?.scrollIntoView({ behavior: 'smooth' })}>
               Посмотреть кабинеты
