@@ -94,8 +94,8 @@ export default function Index() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="text-lg" asChild>
-              <a href="tel:+79397325270">
-                <Icon name="Phone" size={20} className="mr-2" />
+              <a href="https://n1950266.yclients.com" target="_blank" rel="noopener noreferrer">
+                <Icon name="Calendar" size={20} className="mr-2" />
                 Забронировать
               </a>
             </Button>
