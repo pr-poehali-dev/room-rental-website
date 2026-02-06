@@ -8,7 +8,7 @@ const rooms = [
     id: 1,
     name: 'Кабинет №1',
     description: 'Светлый уютный кабинет для комфортной работы как для взрослых, так и для работы с детьми. Легко создается расслабляющая атмосфера с помощью мягкого освещения.',
-    image: 'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/files/b3fadf66-3dc6-4f9e-9a0f-7bc97af10196.jpg',
+    image: 'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/files/419bb62f-8c76-4d03-897a-113413c2a46b.jpg',
     features: ['Wi-Fi', 'Канцелярия', 'Игровая зона', 'Комфортная мебель'],
     price: '500 ₽/час'
   },
@@ -16,7 +16,7 @@ const rooms = [
     id: 2,
     name: 'Кабинет №2',
     description: 'Просторная зона для работы, с возможностью аренды кушетки. Трансформируется в массажный кабинет.',
-    image: 'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/files/65ef026a-8662-4e0c-8423-f4c82e9c965c.jpg',
+    image: 'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/files/363ec558-5b19-425a-9c2f-cdceb8545046.jpg',
     features: ['Wi-Fi', 'Канцелярия', 'Комфортная мебель', 'Массажная кушетка'],
     price: '500 ₽/час'
   },
@@ -24,7 +24,7 @@ const rooms = [
     id: 3,
     name: 'Кабинет №3',
     description: 'Уголок спокойствия, где создается доверительная и расслабляющая атмосфера. Идеальное место, где рождаются хорошие идеи и наступает душевное равновесие.',
-    image: 'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/files/34cb1d8b-cb9a-4237-ae2e-7baaad0187c1.jpg',
+    image: 'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/files/3c9dbdc7-ba09-4022-a76c-82a79589af69.jpg',
     features: ['Wi-Fi', 'Канцелярия', 'Безопасное пространство', 'Комфортная мебель'],
     price: '500 ₽/час'
   }
