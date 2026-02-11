@@ -24,7 +24,7 @@ const rooms = [
     id: 3,
     name: 'Кабинет №3',
     description: 'Уголок спокойствия, где создается доверительная и расслабляющая атмосфера. Идеальное место, где рождаются хорошие идеи и наступает душевное равновесие.',
-    image: 'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/files/3c9dbdc7-ba09-4022-a76c-82a79589af69.jpg',
+    image: 'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/bucket/bff3ead4-cbe6-4db0-955d-347818a3bb1b.jpg',
     features: ['Wi-Fi', 'Канцелярия', 'Безопасное пространство', 'Комфортная мебель'],
     price: '500 ₽/час'
   }
