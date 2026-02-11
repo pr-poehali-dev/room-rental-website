@@ -16,7 +16,7 @@ const rooms = [
     id: 2,
     name: 'Кабинет №2',
     description: 'Просторная зона для работы, с возможностью аренды кушетки. Трансформируется в массажный кабинет.',
-    image: 'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/files/bb421e94-56e2-4643-aa10-9b7c25a5b32c.jpg',
+    image: 'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/bucket/181873af-26a5-45ef-87db-0530ef6ce074.jpg',
     features: ['Wi-Fi', 'Канцелярия', 'Комфортная мебель', 'Массажная кушетка'],
     price: '500 ₽/час'
   },
