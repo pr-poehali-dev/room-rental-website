@@ -8,7 +8,7 @@ const rooms = [
     id: 1,
     name: 'Кабинет №1',
     description: 'Светлый уютный кабинет для комфортной работы как для взрослых, так и для работы с детьми. Легко создается расслабляющая атмосфера с помощью мягкого освещения.',
-    image: 'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/files/419bb62f-8c76-4d03-897a-113413c2a46b.jpg',
+    image: 'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/bucket/f60d772c-667b-4fda-b4b3-f489940fa4a9.png',
     features: ['Wi-Fi', 'Канцелярия', 'Игровая зона', 'Комфортная мебель'],
     price: '500 ₽/час'
   },
