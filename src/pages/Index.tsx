@@ -113,8 +113,8 @@ export default function Index() {
               <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
                 <Icon name="MapPin" size={32} className="text-primary" />
               </div>
-              <h3 className="font-semibold">Центр города</h3>
-              <p className="text-sm text-muted-foreground">Удобная транспортная доступность</p>
+              <h3 className="font-semibold">Удобная локация</h3>
+              <p className="text-sm text-muted-foreground">г. Казань, ул. Чистопольская 61Б (вход со двора)</p>
             </div>
             <div className="flex flex-col items-center gap-3">
               <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
