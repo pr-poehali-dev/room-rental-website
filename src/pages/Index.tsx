@@ -92,15 +92,12 @@ export default function Index() {
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
             Уютное пространство для консультаций. Почасовая аренда. Всё включено.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex justify-center">
             <Button size="lg" className="text-lg" asChild>
               <a href="https://n1950266.yclients.com" target="_blank" rel="noopener noreferrer">
                 <Icon name="Calendar" size={20} className="mr-2" />
                 Забронировать
               </a>
-            </Button>
-            <Button size="lg" variant="outline" className="text-lg" onClick={() => document.getElementById('rooms')?.scrollIntoView({ behavior: 'smooth' })}>
-              Посмотреть кабинеты
             </Button>
           </div>
         </div>
