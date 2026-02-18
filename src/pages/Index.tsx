@@ -128,7 +128,7 @@ export default function Index() {
         </div>
       </section>
 
-      <section id="rooms" className="py-20 px-4">
+      <section id="rooms" className="py-14 px-4">
         <div className="container max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Наши кабинеты</h2>
           <p className="text-center text-muted-foreground mb-12">Выберите подходящее пространство для вашей работы</p>
@@ -167,7 +167,7 @@ export default function Index() {
         </div>
       </section>
 
-      <section id="gallery" className="py-20 px-4">
+      <section id="gallery" className="py-14 px-4">
         <div className="container max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Галерея</h2>
           <p className="text-center text-muted-foreground mb-12">Фотографии наших кабинетов</p>
@@ -214,7 +214,7 @@ export default function Index() {
         </div>
       </section>
 
-      <section id="reviews" className="py-20 px-4 bg-gradient-to-br from-amber-50/30 to-green-50/40">
+      <section id="reviews" className="py-14 px-4 bg-gradient-to-br from-amber-50/30 to-green-50/40">
         <div className="container max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Отзывы</h2>
           <p className="text-center text-muted-foreground mb-12">Что говорят наши клиенты</p>
@@ -238,7 +238,7 @@ export default function Index() {
         </div>
       </section>
 
-      <section id="contacts" className="py-20 px-4">
+      <section id="contacts" className="py-14 px-4">
         <div className="container max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Контакты</h2>
           <p className="text-center text-muted-foreground mb-12">Свяжитесь с нами удобным способом</p>
