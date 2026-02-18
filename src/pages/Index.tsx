@@ -79,7 +79,7 @@ export default function Index() {
             <a href="#contacts" className="text-sm font-medium hover:text-primary transition-colors">Контакты</a>
           </nav>
           <Button className="hidden md:flex" asChild>
-            <a href="https://n1950266.yclients.com" target="_blank" rel="noopener noreferrer">
+            <a href="#rooms">
               <Icon name="Calendar" size={18} className="mr-2" />
               Забронировать
             </a>
