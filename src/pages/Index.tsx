@@ -10,7 +10,8 @@ const rooms = [
     description: 'Светлый уютный кабинет для комфортной работы как для взрослых, так и для работы с детьми. Легко создается расслабляющая атмосфера с помощью мягкого освещения.',
     image: 'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/bucket/f60d772c-667b-4fda-b4b3-f489940fa4a9.png',
     features: ['Wi-Fi', 'Канцелярия', 'Игровая зона', 'Комфортная мебель'],
-    price: '500 ₽/час'
+    price: '500 ₽/час',
+    bookingUrl: 'https://n1950266.yclients.com/company/1718101/personal/select-services?o=m4942632'
   },
   {
     id: 2,
@@ -18,7 +19,8 @@ const rooms = [
     description: 'Просторное рабочее место, которое легко трансформируется в массажный кабинет. Светлая зона для работы.',
     image: 'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/bucket/181873af-26a5-45ef-87db-0530ef6ce074.jpg',
     features: ['Wi-Fi', 'Канцелярия', 'Комфортная мебель', 'Массажная кушетка'],
-    price: '500 ₽/час'
+    price: '500 ₽/час',
+    bookingUrl: 'https://n1950266.yclients.com'
   },
   {
     id: 3,
@@ -26,7 +28,8 @@ const rooms = [
     description: 'Уголок спокойствия, где создается доверительная и расслабляющая атмосфера. Идеальное место, где рождаются хорошие идеи и наступает душевное равновесие.',
     image: 'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/bucket/bff3ead4-cbe6-4db0-955d-347818a3bb1b.jpg',
     features: ['Wi-Fi', 'Канцелярия', 'Безопасное пространство', 'Комфортная мебель'],
-    price: '500 ₽/час'
+    price: '500 ₽/час',
+    bookingUrl: 'https://n1950266.yclients.com'
   }
 ];
 
@@ -165,7 +168,7 @@ export default function Index() {
                   <div className="flex flex-col gap-3">
                     <span className="text-2xl font-bold text-primary">{room.price}</span>
                     <Button asChild className="w-full">
-                      <a href="https://n1950266.yclients.com" target="_blank" rel="noopener noreferrer">
+                      <a href={room.bookingUrl} target="_blank" rel="noopener noreferrer">
                         Забронировать
                       </a>
                     </Button>
