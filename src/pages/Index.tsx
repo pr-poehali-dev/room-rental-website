@@ -89,7 +89,7 @@ export default function Index() {
 
       <section className="py-20 px-4 bg-gradient-to-b from-background via-green-50/30 to-amber-50/20">
         <div className="container max-w-6xl mx-auto text-center">
-          <h1 className="text-3xl md:text-5xl font-bold mb-6 animate-fade-in">
+          <h1 className="text-3xl md:text-5xl font-bold mb-4 animate-fade-in">
             Mind Bloom — Пространство для психологов
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-3xl mx-auto">
@@ -127,6 +127,7 @@ export default function Index() {
           </div>
         </div>
       </section>
+
       <section id="rooms" className="py-20 px-4">
         <div className="container max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Наши кабинеты</h2>
@@ -165,8 +166,6 @@ export default function Index() {
           </div>
         </div>
       </section>
-
-
 
       <section id="gallery" className="py-20 px-4">
         <div className="container max-w-6xl mx-auto">
