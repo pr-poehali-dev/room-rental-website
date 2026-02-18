@@ -29,7 +29,7 @@ const rooms = [
     image: 'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/bucket/bff3ead4-cbe6-4db0-955d-347818a3bb1b.jpg',
     features: ['Wi-Fi', 'Канцелярия', 'Безопасное пространство', 'Комфортная мебель'],
     price: '500 ₽/час',
-    bookingUrl: 'https://n1950266.yclients.com'
+    bookingUrl: 'https://n1950266.yclients.com/company/1718101/personal/select-services?o=m4959480'
   }
 ];
 
@@ -92,22 +92,9 @@ export default function Index() {
           <h1 className="text-3xl md:text-5xl font-bold mb-6 animate-fade-in">
             Mind Bloom — Пространство для психологов
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-3xl mx-auto">
             Уютное пространство для консультаций. Почасовая аренда. Всё включено.
           </p>
-          <div className="flex justify-center">
-            <Button size="lg" className="text-lg" asChild>
-              <a href="https://n1950266.yclients.com" target="_blank" rel="noopener noreferrer">
-                <Icon name="Calendar" size={20} className="mr-2" />
-                Забронировать
-              </a>
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 px-4 bg-gradient-to-br from-green-50/40 to-amber-50/30">
-        <div className="container max-w-6xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div className="flex flex-col items-center gap-3">
               <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
@@ -140,7 +127,6 @@ export default function Index() {
           </div>
         </div>
       </section>
-
       <section id="rooms" className="py-20 px-4">
         <div className="container max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Наши кабинеты</h2>
