@@ -20,7 +20,7 @@ const rooms = [
     image: 'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/bucket/181873af-26a5-45ef-87db-0530ef6ce074.jpg',
     features: ['Wi-Fi', 'Канцелярия', 'Комфортная мебель', 'Массажная кушетка'],
     price: '500 ₽/час',
-    bookingUrl: 'https://n1950266.yclients.com'
+    bookingUrl: 'https://n1950266.yclients.com/company/1718101/personal/select-services?o=m4936259'
   },
   {
     id: 3,
