@@ -101,7 +101,7 @@ export default function Index() {
                 <Icon name="MapPin" size={32} className="text-primary" />
               </div>
               <h3 className="font-semibold">Удобная локация</h3>
-              <a href="https://yandex.ru/map-constructor/2bbb51f1e1ce0bb5ddf1f373b678ea22c883fdbde4b30b74abfea21798cab363" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground underline hover:text-primary transition-colors">г. Казань, ул. Чистопольская 61Б (вход со двора)</a>
+              <p className="text-sm text-muted-foreground">г. Казань, ул. Чистопольская 61Б (вход со двора)</p>
             </div>
             <div className="flex flex-col items-center gap-3">
               <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
