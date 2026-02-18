@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from '@/components/ui/carousel';
 import Icon from '@/components/ui/icon';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
@@ -9,6 +10,11 @@ const rooms = [
     name: 'Кабинет №1',
     description: 'Светлый уютный кабинет для комфортной работы как для взрослых, так и для работы с детьми. Легко создается расслабляющая атмосфера с помощью мягкого освещения.',
     image: 'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/bucket/f60d772c-667b-4fda-b4b3-f489940fa4a9.png',
+    images: [
+      'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/bucket/f60d772c-667b-4fda-b4b3-f489940fa4a9.png',
+      'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/files/3158c0bd-0e0c-498e-b388-4d709466d63c.jpg',
+      'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/files/e7b90ffc-6c44-403d-bb5a-8b874cf84514.jpg',
+    ],
     features: ['Wi-Fi', 'Канцелярия', 'Игровая зона', 'Комфортная мебель'],
     price: '500 ₽/час',
     bookingUrl: 'https://n1950266.yclients.com/company/1718101/personal/select-services?o=m4942632'
@@ -18,6 +24,11 @@ const rooms = [
     name: 'Кабинет №2',
     description: 'Просторное рабочее место, которое легко трансформируется в массажный кабинет. Светлая зона для работы.',
     image: 'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/bucket/181873af-26a5-45ef-87db-0530ef6ce074.jpg',
+    images: [
+      'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/bucket/181873af-26a5-45ef-87db-0530ef6ce074.jpg',
+      'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/files/73226305-a7a9-4a6f-b10e-f022accd8694.jpg',
+      'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/files/3bf9a16c-59ad-4790-b5ec-49ef9fae6405.jpg',
+    ],
     features: ['Wi-Fi', 'Канцелярия', 'Комфортная мебель', 'Массажная кушетка'],
     price: '500 ₽/час',
     bookingUrl: 'https://n1950266.yclients.com/company/1718101/personal/select-services?o=m4936259'
@@ -27,6 +38,11 @@ const rooms = [
     name: 'Кабинет №3',
     description: 'Уголок спокойствия, где создается доверительная и расслабляющая атмосфера. Идеальное место, где рождаются хорошие идеи и наступает душевное равновесие.',
     image: 'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/bucket/bff3ead4-cbe6-4db0-955d-347818a3bb1b.jpg',
+    images: [
+      'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/bucket/bff3ead4-cbe6-4db0-955d-347818a3bb1b.jpg',
+      'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/files/f807d719-8662-474e-a966-ad6ca8915603.jpg',
+      'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/files/b0fcc61e-5ff3-4e37-ae0e-8a3a013708ef.jpg',
+    ],
     features: ['Wi-Fi', 'Канцелярия', 'Безопасное пространство', 'Комфортная мебель'],
     price: '500 ₽/час',
     bookingUrl: 'https://n1950266.yclients.com/company/1718101/personal/select-services?o=m4959480'
@@ -182,11 +198,23 @@ export default function Index() {
             
             <TabsContent value="all" className="grid md:grid-cols-3 gap-4">
               {rooms.map((room) => (
-                <div key={room.id} className="relative overflow-hidden rounded-lg group cursor-pointer">
-                  <img src={room.image} alt={room.name} className="w-full h-64 object-cover transition-transform group-hover:scale-110" />
-                  <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                    <p className="text-white font-semibold">{room.name}</p>
-                  </div>
+                <div key={room.id} className="relative overflow-hidden rounded-lg">
+                  <Carousel opts={{ loop: true }} className="w-full">
+                    <CarouselContent>
+                      {room.images.map((img, imgIdx) => (
+                        <CarouselItem key={imgIdx}>
+                          <div className="relative group cursor-pointer">
+                            <img src={img} alt={`${room.name} — фото ${imgIdx + 1}`} className="w-full h-64 object-cover transition-transform group-hover:scale-105" />
+                            <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                              <p className="text-white font-semibold">{room.name}</p>
+                            </div>
+                          </div>
+                        </CarouselItem>
+                      ))}
+                    </CarouselContent>
+                    <CarouselPrevious className="left-2 bg-white/80 hover:bg-white border-0" />
+                    <CarouselNext className="right-2 bg-white/80 hover:bg-white border-0" />
+                  </Carousel>
                 </div>
               ))}
             </TabsContent>
@@ -194,7 +222,17 @@ export default function Index() {
             {rooms.map((room, idx) => (
               <TabsContent key={room.id} value={`room${idx + 1}`} className="grid md:grid-cols-2 gap-4">
                 <div className="relative overflow-hidden rounded-lg">
-                  <img src={room.image} alt={room.name} className="w-full h-80 object-cover" />
+                  <Carousel opts={{ loop: true }} className="w-full">
+                    <CarouselContent>
+                      {room.images.map((img, imgIdx) => (
+                        <CarouselItem key={imgIdx}>
+                          <img src={img} alt={`${room.name} — фото ${imgIdx + 1}`} className="w-full h-80 object-cover" />
+                        </CarouselItem>
+                      ))}
+                    </CarouselContent>
+                    <CarouselPrevious className="left-2 bg-white/80 hover:bg-white border-0" />
+                    <CarouselNext className="right-2 bg-white/80 hover:bg-white border-0" />
+                  </Carousel>
                 </div>
                 <div className="flex flex-col justify-center">
                   <h3 className="text-2xl font-bold mb-4">{room.name}</h3>
