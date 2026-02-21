@@ -3,8 +3,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from '@/components/ui/carousel';
 import Icon from '@/components/ui/icon';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-const MONSTERA_LEFT = 'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/bucket/a356dd1b-f686-45da-81d4-4c6d48460e82.png';
-const MONSTERA_RIGHT = 'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/bucket/ca764f89-d17e-4b16-8b96-b9d509579c95.png';
 
 const rooms = [
   {
@@ -79,7 +77,7 @@ const testimonials = [
 export default function Index() {
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen" style={{backgroundImage: `url('https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/bucket/5196a9d7-1cff-45d5-9e81-612e05c53c1e.jpg')`, backgroundSize: 'cover', backgroundAttachment: 'fixed', backgroundPosition: 'center'}}>
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-3">
@@ -105,9 +103,7 @@ export default function Index() {
         </div>
       </header>
 
-      <section className="relative py-20 px-4 bg-gradient-to-b from-background via-green-50/30 to-amber-50/20 overflow-hidden">
-        <img src={MONSTERA_LEFT} alt="" aria-hidden className="absolute -left-6 bottom-0 w-52 md:w-64 opacity-90 pointer-events-none select-none" />
-        <img src={MONSTERA_RIGHT} alt="" aria-hidden className="absolute -right-6 -top-6 w-52 md:w-72 opacity-90 pointer-events-none select-none" />
+      <section className="relative py-20 px-4 overflow-hidden">
         <div className="container max-w-6xl mx-auto text-center relative z-10">
           <h1 className="text-3xl md:text-5xl font-bold mb-4 animate-fade-in">
             Mind Bloom — Пространство для психологов
@@ -149,8 +145,6 @@ export default function Index() {
       </section>
 
       <section id="rooms" className="relative py-14 px-4 overflow-hidden">
-        <img src={MONSTERA_LEFT} alt="" aria-hidden className="absolute -left-6 bottom-0 w-48 md:w-60 opacity-80 pointer-events-none select-none" />
-        <img src={MONSTERA_RIGHT} alt="" aria-hidden className="absolute -right-6 -top-4 w-48 md:w-60 opacity-80 pointer-events-none select-none" />
         <div className="container max-w-6xl mx-auto relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Наши кабинеты</h2>
           <p className="text-center text-muted-foreground mb-12">Выберите подходящее пространство для вашей работы</p>
@@ -258,9 +252,7 @@ export default function Index() {
         </div>
       </section>
 
-      <section id="reviews" className="relative py-14 px-4 bg-gradient-to-br from-amber-50/30 to-green-50/40 overflow-hidden">
-        <img src={MONSTERA_LEFT} alt="" aria-hidden className="absolute -left-6 bottom-0 w-48 md:w-60 opacity-80 pointer-events-none select-none" />
-        <img src={MONSTERA_RIGHT} alt="" aria-hidden className="absolute -right-6 -top-4 w-48 md:w-60 opacity-80 pointer-events-none select-none" />
+      <section id="reviews" className="relative py-14 px-4 overflow-hidden">
         <div className="container max-w-6xl mx-auto relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Отзывы</h2>
           <p className="text-center text-muted-foreground mb-12">Что говорят наши клиенты</p>
