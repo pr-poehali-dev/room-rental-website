@@ -5,12 +5,12 @@ interface MonsteraLeafProps {
   size?: number;
 }
 
-export default function MonsteraLeaf({ className = '', opacity = 0.18, flip = false, size = 220 }: MonsteraLeafProps) {
+export default function MonsteraLeaf({ className = '', opacity = 0.22, flip = false, size = 260 }: MonsteraLeafProps) {
   return (
     <svg
       width={size}
-      height={size}
-      viewBox="0 0 300 340"
+      height={size * 1.1}
+      viewBox="0 0 280 308"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
@@ -18,152 +18,89 @@ export default function MonsteraLeaf({ className = '', opacity = 0.18, flip = fa
       aria-hidden="true"
     >
       <defs>
-        <radialGradient id="leafGrad" cx="45%" cy="40%" r="60%">
-          <stop offset="0%" stopColor="#5d9e6e" />
-          <stop offset="50%" stopColor="#3f7d52" />
-          <stop offset="100%" stopColor="#2a5c38" />
-        </radialGradient>
-        <radialGradient id="leafGrad2" cx="55%" cy="35%" r="55%">
-          <stop offset="0%" stopColor="#6aab78" />
-          <stop offset="60%" stopColor="#3f7d52" />
-          <stop offset="100%" stopColor="#254d30" />
+        <radialGradient id="mGrad" cx="40%" cy="35%" r="65%">
+          <stop offset="0%" stopColor="#7ec47e" />
+          <stop offset="45%" stopColor="#4a8c55" />
+          <stop offset="100%" stopColor="#234e2e" />
         </radialGradient>
       </defs>
 
-      {/* Stem */}
-      <path
-        d="M150 310 C148 295 147 280 149 265 C150 255 151 245 150 230"
-        stroke="#4a7a40"
-        strokeWidth="5"
-        strokeLinecap="round"
-        fill="none"
-      />
+      {/* Petiole / stem */}
+      <path d="M140 298 C140 278 140 262 140 248 C140 238 139 228 138 218" stroke="#3a6e40" strokeWidth="5" strokeLinecap="round" fill="none" />
 
-      {/* Main leaf shape — realistic monstera outline with lobes and cuts */}
+      {/* Main leaf body — rounded monstera shape */}
       <path
         d="
-          M150 230
-          C145 220 135 210 122 200
-          C108 188 90 178 72 172
-          C52 165 32 162 20 155
-          C10 149 8 140 12 132
-          C16 123 26 118 36 118
-          C30 110 28 100 32 92
-          C37 82 48 78 58 80
-          C52 70 52 58 58 50
-          C65 40 78 37 88 42
-          C84 32 86 20 94 14
-          C102 7 115 8 122 16
-          C126 8 134 3 144 2
-          C154 1 164 6 168 14
-          C175 7 186 4 196 9
-          C207 14 212 26 208 36
-          C218 34 230 38 236 48
-          C242 58 240 72 233 80
-          C244 80 254 86 258 96
-          C262 107 258 120 250 126
-          C260 128 268 136 268 146
-          C268 157 260 166 250 168
-          C262 172 270 182 268 194
-          C266 206 255 214 244 214
-          C238 218 230 222 222 228
-          C210 237 196 244 182 250
-          C168 256 155 258 150 254
-          C150 254 150 254 150 230 Z
+          M138 218
+          C125 206 108 194 88 184
+          C66 173 42 166 22 166
+          C8 166 0 172 0 182
+          C0 192 10 200 26 204
+          C46 209 70 212 90 220
+          C108 227 122 237 132 248
+          C134 251 136 254 137 258
+
+          C133 262 126 268 118 272
+          C108 276 98 274 96 266
+          C94 258 102 250 114 248
+
+          C112 258 108 268 100 274
+
+          L 140 286
+
+          L 180 274
+          C172 268 168 258 166 248
+
+          C178 250 186 258 184 266
+          C182 274 172 276 162 272
+          C154 268 147 262 143 258
+
+          C142 254 144 251 146 248
+          C156 237 170 227 188 220
+          C208 212 232 209 252 204
+          C268 200 278 192 278 182
+          C278 172 270 166 256 166
+          C236 166 212 173 190 184
+          C170 194 153 206 140 218 Z
         "
-        fill="url(#leafGrad)"
+        fill="url(#mGrad)"
       />
 
-      {/* Left side shading overlay */}
-      <path
-        d="
-          M150 230
-          C145 220 135 210 122 200
-          C108 188 90 178 72 172
-          C52 165 32 162 20 155
-          C10 149 8 140 12 132
-          C36 118 58 80 88 42
-          C84 32 86 20 94 14
-          C102 7 115 8 122 16
-          C106 35 95 55 90 80
-          C82 108 88 138 100 162
-          C112 185 130 205 150 220 Z
-        "
-        fill="#2d5e3a"
-        opacity="0.25"
-      />
+      {/* Left edge slits (cuts from perimeter inward) */}
+      <path d="M22 174 C34 178 56 186 78 198 C56 196 28 196 14 200 C4 202 2 192 10 184 Z" fill="white" />
+      <path d="M4 196 C18 198 46 204 70 216 C46 218 16 220 2 226 C-6 230 -4 218 0 208 Z" fill="white" />
 
-      {/* Characteristic monstera holes / slits — left side */}
-      <path
-        d="M88 115 C82 108 78 98 80 88 C82 79 90 74 98 76 C104 78 108 85 106 94 C104 104 96 112 88 115 Z"
-        fill="white"
-      />
-      <path
-        d="M72 158 C64 152 58 140 60 130 C62 120 72 114 80 118 C88 121 92 132 88 142 C84 152 78 160 72 158 Z"
-        fill="white"
-      />
+      {/* Right edge slits */}
+      <path d="M258 174 C246 178 224 186 202 198 C224 196 252 196 266 200 C276 202 278 192 270 184 Z" fill="white" />
+      <path d="M276 196 C262 198 234 204 210 216 C234 218 264 220 278 226 C286 230 284 218 280 208 Z" fill="white" />
 
-      {/* Right side holes */}
-      <path
-        d="M200 105 C206 98 214 94 222 96 C230 99 234 108 230 116 C226 124 216 128 208 124 C200 120 196 112 200 105 Z"
-        fill="white"
-      />
-      <path
-        d="M224 158 C230 150 240 146 248 150 C256 154 258 164 252 172 C246 180 234 182 226 177 C218 171 218 166 224 158 Z"
-        fill="white"
-      />
+      {/* Upper slits */}
+      <path d="M60 170 C70 174 88 182 104 194 C88 190 66 186 52 188 C42 188 38 180 46 174 Z" fill="white" />
+      <path d="M220 170 C210 174 192 182 176 194 C192 190 214 186 228 188 C238 188 242 180 234 174 Z" fill="white" />
 
-      {/* Narrow edge slits (characteristic notches on outer edge) */}
-      <path
-        d="M34 142 C28 136 26 126 34 120 C36 118 38 118 40 120 C38 128 37 136 42 142 C39 144 36 144 34 142 Z"
-        fill="white"
-        opacity="0.7"
-      />
-      <path
-        d="M255 148 C262 142 264 132 256 126 C254 124 252 124 250 126 C252 134 253 142 248 148 C251 150 254 150 255 148 Z"
-        fill="white"
-        opacity="0.7"
-      />
+      {/* Small holes near stem */}
+      <ellipse cx="118" cy="250" rx="7" ry="5" transform="rotate(-10 118 250)" fill="white" />
+      <ellipse cx="162" cy="250" rx="7" ry="5" transform="rotate(10 162 250)" fill="white" />
+      <ellipse cx="116" cy="262" rx="5" ry="4" fill="white" />
+      <ellipse cx="164" cy="262" rx="5" ry="4" fill="white" />
 
-      {/* Center vein */}
-      <path
-        d="M150 228 C150 210 150 190 150 170 C150 148 150 120 150 90 C150 68 150 46 150 24"
-        stroke="#2a5c38"
-        strokeWidth="2.5"
-        strokeLinecap="round"
-        fill="none"
-      />
+      {/* Centre vein */}
+      <path d="M138 218 C139 230 140 242 140 256" stroke="#2a5530" strokeWidth="2.4" strokeLinecap="round" fill="none" />
 
       {/* Left veins */}
-      <path d="M150 80  C138 85  118 85  96 78" stroke="#2a5c38" strokeWidth="1.4" strokeLinecap="round" fill="none" />
-      <path d="M150 106 C136 112 112 114 88 110" stroke="#2a5c38" strokeWidth="1.3" strokeLinecap="round" fill="none" />
-      <path d="M150 132 C134 138 108 142 80 136" stroke="#2a5c38" strokeWidth="1.3" strokeLinecap="round" fill="none" />
-      <path d="M150 158 C132 164 104 168 72 162" stroke="#2a5c38" strokeWidth="1.2" strokeLinecap="round" fill="none" />
-      <path d="M150 182 C134 188 112 196 86 196" stroke="#2a5c38" strokeWidth="1.2" strokeLinecap="round" fill="none" />
-      <path d="M150 205 C138 210 122 218 104 222" stroke="#2a5c38" strokeWidth="1.1" strokeLinecap="round" fill="none" />
+      <path d="M138 192 C122 196 96 196 68 188" stroke="#2a5530" strokeWidth="1.4" strokeLinecap="round" fill="none" />
+      <path d="M138 206 C118 210 88 212 56 206" stroke="#2a5530" strokeWidth="1.3" strokeLinecap="round" fill="none" />
+      <path d="M138 220 C116 224 82 228 46 224" stroke="#2a5530" strokeWidth="1.3" strokeLinecap="round" fill="none" />
+      <path d="M138 234 C118 240 90 246 62 246" stroke="#2a5530" strokeWidth="1.2" strokeLinecap="round" fill="none" />
 
       {/* Right veins */}
-      <path d="M150 80  C162 85  182 85  204 78" stroke="#2a5c38" strokeWidth="1.4" strokeLinecap="round" fill="none" />
-      <path d="M150 106 C164 112 188 114 212 108" stroke="#2a5c38" strokeWidth="1.3" strokeLinecap="round" fill="none" />
-      <path d="M150 132 C166 138 190 140 218 134" stroke="#2a5c38" strokeWidth="1.3" strokeLinecap="round" fill="none" />
-      <path d="M150 158 C168 164 196 166 226 160" stroke="#2a5c38" strokeWidth="1.2" strokeLinecap="round" fill="none" />
-      <path d="M150 182 C168 188 192 194 216 192" stroke="#2a5c38" strokeWidth="1.2" strokeLinecap="round" fill="none" />
-      <path d="M150 205 C164 210 180 218 198 222" stroke="#2a5c38" strokeWidth="1.1" strokeLinecap="round" fill="none" />
+      <path d="M140 192 C156 196 182 196 210 188" stroke="#2a5530" strokeWidth="1.4" strokeLinecap="round" fill="none" />
+      <path d="M140 206 C160 210 190 212 222 206" stroke="#2a5530" strokeWidth="1.3" strokeLinecap="round" fill="none" />
+      <path d="M140 220 C162 224 196 228 232 224" stroke="#2a5530" strokeWidth="1.3" strokeLinecap="round" fill="none" />
+      <path d="M140 234 C160 240 188 246 216 246" stroke="#2a5530" strokeWidth="1.2" strokeLinecap="round" fill="none" />
 
-      {/* Sub-veins left */}
-      <path d="M96 78  C90 86  88 96  90 108" stroke="#3a6e47" strokeWidth="0.8" strokeLinecap="round" fill="none" opacity="0.7" />
-      <path d="M80 136 C72 144  68 154  72 164" stroke="#3a6e47" strokeWidth="0.8" strokeLinecap="round" fill="none" opacity="0.7" />
-
-      {/* Sub-veins right */}
-      <path d="M204 78  C210 86  212 96  210 108" stroke="#3a6e47" strokeWidth="0.8" strokeLinecap="round" fill="none" opacity="0.7" />
-      <path d="M218 134 C226 142  230 152  226 162" stroke="#3a6e47" strokeWidth="0.8" strokeLinecap="round" fill="none" opacity="0.7" />
-
-      {/* Highlight gloss */}
-      <path
-        d="M150 30 C158 40 166 58 164 76 C162 90 154 100 150 108 C148 98 146 84 148 68 C149 52 150 40 150 30 Z"
-        fill="white"
-        opacity="0.08"
-      />
+      {/* Gloss highlight */}
+      <path d="M138 172 C146 182 154 198 150 216 C144 202 140 186 138 172 Z" fill="white" opacity="0.12" />
     </svg>
   );
 }

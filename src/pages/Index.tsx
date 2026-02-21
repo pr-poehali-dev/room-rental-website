@@ -4,6 +4,8 @@ import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext
 import Icon from '@/components/ui/icon';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import MonsteraLeaf from '@/components/MonsteraLeaf';
+import LeafPalmWide from '@/components/LeafPalmWide';
+import LeafPalmThin from '@/components/LeafPalmThin';
 
 const rooms = [
   {
@@ -105,8 +107,8 @@ export default function Index() {
       </header>
 
       <section className="relative py-20 px-4 bg-gradient-to-b from-background via-green-50/30 to-amber-50/20 overflow-hidden">
-        <MonsteraLeaf className="absolute -left-12 -top-8 rotate-[-20deg]" size={280} opacity={0.13} />
-        <MonsteraLeaf className="absolute -right-10 bottom-0 rotate-[30deg]" size={260} opacity={0.12} flip />
+        <LeafPalmWide className="absolute -left-16 -top-6 rotate-[-25deg]" size={300} opacity={0.20} />
+        <LeafPalmWide className="absolute -right-16 bottom-0 rotate-[20deg]" size={280} opacity={0.18} flip />
         <div className="container max-w-6xl mx-auto text-center relative z-10">
           <h1 className="text-3xl md:text-5xl font-bold mb-4 animate-fade-in">
             Mind Bloom — Пространство для психологов
@@ -148,7 +150,7 @@ export default function Index() {
       </section>
 
       <section id="rooms" className="relative py-14 px-4 overflow-hidden">
-        <MonsteraLeaf className="absolute right-0 top-8 rotate-[15deg]" size={200} opacity={0.10} flip />
+        <LeafPalmThin className="absolute -right-8 top-4 rotate-[10deg]" size={280} opacity={0.19} flip />
         <div className="container max-w-6xl mx-auto relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Наши кабинеты</h2>
           <p className="text-center text-muted-foreground mb-12">Выберите подходящее пространство для вашей работы</p>
@@ -257,8 +259,7 @@ export default function Index() {
       </section>
 
       <section id="reviews" className="relative py-14 px-4 bg-gradient-to-br from-amber-50/30 to-green-50/40 overflow-hidden">
-        <MonsteraLeaf className="absolute -left-14 top-1/2 -translate-y-1/2 rotate-[40deg]" size={240} opacity={0.11} />
-        <MonsteraLeaf className="absolute -right-12 bottom-4 rotate-[-25deg]" size={200} opacity={0.10} flip />
+        <MonsteraLeaf className="absolute -right-14 top-1/2 -translate-y-1/2 rotate-[15deg]" size={300} opacity={0.20} flip />
         <div className="container max-w-6xl mx-auto relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Отзывы</h2>
           <p className="text-center text-muted-foreground mb-12">Что говорят наши клиенты</p>
@@ -283,7 +284,6 @@ export default function Index() {
       </section>
 
       <section id="contacts" className="relative py-14 px-4 overflow-hidden">
-        <MonsteraLeaf className="absolute left-4 bottom-0 rotate-[-15deg]" size={180} opacity={0.09} />
         <div className="container max-w-4xl mx-auto relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Контакты</h2>
           <p className="text-center text-muted-foreground mb-12">Свяжитесь с нами удобным способом</p>
