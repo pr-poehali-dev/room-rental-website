@@ -3,7 +3,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from '@/components/ui/carousel';
 import Icon from '@/components/ui/icon';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-const MONSTERA_URL = 'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/bucket/a00c9284-d63a-41b7-af9e-e1f852b6f79b.png';
+const MONSTERA_LEFT = 'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/bucket/a356dd1b-f686-45da-81d4-4c6d48460e82.png';
+const MONSTERA_RIGHT = 'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/bucket/ca764f89-d17e-4b16-8b96-b9d509579c95.png';
 
 const rooms = [
   {
@@ -105,8 +106,8 @@ export default function Index() {
       </header>
 
       <section className="relative py-20 px-4 bg-gradient-to-b from-background via-green-50/30 to-amber-50/20 overflow-hidden">
-        <img src={MONSTERA_URL} alt="" aria-hidden className="absolute -left-10 -top-8 w-64 md:w-80 rotate-[-160deg] opacity-90 pointer-events-none select-none" />
-        <img src={MONSTERA_URL} alt="" aria-hidden className="absolute -right-10 -bottom-8 w-64 md:w-80 rotate-[20deg] opacity-90 pointer-events-none select-none" />
+        <img src={MONSTERA_LEFT} alt="" aria-hidden className="absolute -left-6 bottom-0 w-52 md:w-64 opacity-90 pointer-events-none select-none" />
+        <img src={MONSTERA_RIGHT} alt="" aria-hidden className="absolute -right-6 -top-6 w-52 md:w-72 opacity-90 pointer-events-none select-none" />
         <div className="container max-w-6xl mx-auto text-center relative z-10">
           <h1 className="text-3xl md:text-5xl font-bold mb-4 animate-fade-in">
             Mind Bloom — Пространство для психологов
@@ -148,7 +149,8 @@ export default function Index() {
       </section>
 
       <section id="rooms" className="relative py-14 px-4 overflow-hidden">
-        <img src={MONSTERA_URL} alt="" aria-hidden className="absolute -right-10 -top-6 w-56 md:w-72 rotate-[30deg] opacity-80 pointer-events-none select-none" />
+        <img src={MONSTERA_LEFT} alt="" aria-hidden className="absolute -left-6 bottom-0 w-48 md:w-60 opacity-80 pointer-events-none select-none" />
+        <img src={MONSTERA_RIGHT} alt="" aria-hidden className="absolute -right-6 -top-4 w-48 md:w-60 opacity-80 pointer-events-none select-none" />
         <div className="container max-w-6xl mx-auto relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Наши кабинеты</h2>
           <p className="text-center text-muted-foreground mb-12">Выберите подходящее пространство для вашей работы</p>
@@ -257,7 +259,8 @@ export default function Index() {
       </section>
 
       <section id="reviews" className="relative py-14 px-4 bg-gradient-to-br from-amber-50/30 to-green-50/40 overflow-hidden">
-        <img src={MONSTERA_URL} alt="" aria-hidden className="absolute -left-10 bottom-0 w-56 md:w-72 rotate-[-140deg] opacity-80 pointer-events-none select-none" />
+        <img src={MONSTERA_LEFT} alt="" aria-hidden className="absolute -left-6 bottom-0 w-48 md:w-60 opacity-80 pointer-events-none select-none" />
+        <img src={MONSTERA_RIGHT} alt="" aria-hidden className="absolute -right-6 -top-4 w-48 md:w-60 opacity-80 pointer-events-none select-none" />
         <div className="container max-w-6xl mx-auto relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Отзывы</h2>
           <p className="text-center text-muted-foreground mb-12">Что говорят наши клиенты</p>
