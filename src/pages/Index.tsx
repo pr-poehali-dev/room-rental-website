@@ -3,9 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from '@/components/ui/carousel';
 import Icon from '@/components/ui/icon';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import MonsteraLeaf from '@/components/MonsteraLeaf';
-import LeafPalmWide from '@/components/LeafPalmWide';
-import LeafPalmThin from '@/components/LeafPalmThin';
+const MONSTERA_URL = 'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/bucket/a00c9284-d63a-41b7-af9e-e1f852b6f79b.png';
 
 const rooms = [
   {
@@ -107,8 +105,8 @@ export default function Index() {
       </header>
 
       <section className="relative py-20 px-4 bg-gradient-to-b from-background via-green-50/30 to-amber-50/20 overflow-hidden">
-        <LeafPalmWide className="absolute -left-16 -top-6 rotate-[-25deg]" size={300} opacity={0.20} />
-        <LeafPalmWide className="absolute -right-16 bottom-0 rotate-[20deg]" size={280} opacity={0.18} flip />
+        <img src={MONSTERA_URL} alt="" aria-hidden className="absolute -left-10 -top-8 w-64 md:w-80 rotate-[-160deg] opacity-90 pointer-events-none select-none" />
+        <img src={MONSTERA_URL} alt="" aria-hidden className="absolute -right-10 -bottom-8 w-64 md:w-80 rotate-[20deg] opacity-90 pointer-events-none select-none" />
         <div className="container max-w-6xl mx-auto text-center relative z-10">
           <h1 className="text-3xl md:text-5xl font-bold mb-4 animate-fade-in">
             Mind Bloom — Пространство для психологов
@@ -150,7 +148,7 @@ export default function Index() {
       </section>
 
       <section id="rooms" className="relative py-14 px-4 overflow-hidden">
-        <LeafPalmThin className="absolute -right-8 top-4 rotate-[10deg]" size={280} opacity={0.19} flip />
+        <img src={MONSTERA_URL} alt="" aria-hidden className="absolute -right-10 -top-6 w-56 md:w-72 rotate-[30deg] opacity-80 pointer-events-none select-none" />
         <div className="container max-w-6xl mx-auto relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Наши кабинеты</h2>
           <p className="text-center text-muted-foreground mb-12">Выберите подходящее пространство для вашей работы</p>
@@ -259,7 +257,7 @@ export default function Index() {
       </section>
 
       <section id="reviews" className="relative py-14 px-4 bg-gradient-to-br from-amber-50/30 to-green-50/40 overflow-hidden">
-        <MonsteraLeaf className="absolute -right-14 top-1/2 -translate-y-1/2 rotate-[15deg]" size={300} opacity={0.20} flip />
+        <img src={MONSTERA_URL} alt="" aria-hidden className="absolute -left-10 bottom-0 w-56 md:w-72 rotate-[-140deg] opacity-80 pointer-events-none select-none" />
         <div className="container max-w-6xl mx-auto relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Отзывы</h2>
           <p className="text-center text-muted-foreground mb-12">Что говорят наши клиенты</p>
