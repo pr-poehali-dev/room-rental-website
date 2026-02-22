@@ -16,7 +16,7 @@ const rooms = [
       'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/files/e7b90ffc-6c44-403d-bb5a-8b874cf84514.jpg',
     ],
     features: ['Wi-Fi', 'Канцелярия', 'Игровая зона', 'Комфортная мебель'],
-    price: '500 ₽/час',
+    price: '450 ₽/час',
     bookingUrl: 'https://n1950266.yclients.com/company/1718101/personal/select-services?o=m4942632'
   },
   {
@@ -30,7 +30,7 @@ const rooms = [
       'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/files/3bf9a16c-59ad-4790-b5ec-49ef9fae6405.jpg',
     ],
     features: ['Wi-Fi', 'Канцелярия', 'Комфортная мебель', 'Массажная кушетка'],
-    price: '500 ₽/час',
+    price: '450 ₽/час',
     bookingUrl: 'https://n1950266.yclients.com/company/1718101/personal/select-services?o=m4936259'
   },
   {
@@ -44,7 +44,7 @@ const rooms = [
       'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/files/b0fcc61e-5ff3-4e37-ae0e-8a3a013708ef.jpg',
     ],
     features: ['Wi-Fi', 'Канцелярия', 'Безопасное пространство', 'Комфортная мебель'],
-    price: '500 ₽/час',
+    price: '450 ₽/час',
     bookingUrl: 'https://n1950266.yclients.com/company/1718101/personal/select-services?o=m4959480'
   }
 ];
