@@ -14,6 +14,7 @@ const rooms = [
       'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/bucket/f60d772c-667b-4fda-b4b3-f489940fa4a9.png',
       'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/files/3158c0bd-0e0c-498e-b388-4d709466d63c.jpg',
       'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/files/e7b90ffc-6c44-403d-bb5a-8b874cf84514.jpg',
+      'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/bucket/43c68b04-225e-4dcd-b709-987b8e6a6ff4.jpeg',
     ],
     area: 14.5,
     features: ['Wi-Fi', 'Канцелярия', 'Игровая зона', 'Комфортная мебель'],
