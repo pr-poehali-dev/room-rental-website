@@ -14,9 +14,7 @@ const rooms = [
       'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/bucket/f60d772c-667b-4fda-b4b3-f489940fa4a9.png',
       'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/files/3158c0bd-0e0c-498e-b388-4d709466d63c.jpg',
       'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/files/e7b90ffc-6c44-403d-bb5a-8b874cf84514.jpg',
-      'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/bucket/43c68b04-225e-4dcd-b709-987b8e6a6ff4.jpeg',
     ],
-    area: 14.5,
     features: ['Wi-Fi', 'Канцелярия', 'Игровая зона', 'Комфортная мебель'],
     price: '450 ₽/час',
     bookingUrl: 'https://n1950266.yclients.com/company/1718101/personal/select-services?o=m4942632'
@@ -31,7 +29,6 @@ const rooms = [
       'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/files/73226305-a7a9-4a6f-b10e-f022accd8694.jpg',
       'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/files/3bf9a16c-59ad-4790-b5ec-49ef9fae6405.jpg',
     ],
-    area: 14,
     features: ['Wi-Fi', 'Канцелярия', 'Комфортная мебель', 'Массажная кушетка'],
     price: '450 ₽/час',
     bookingUrl: 'https://n1950266.yclients.com/company/1718101/personal/select-services?o=m4936259'
@@ -46,7 +43,6 @@ const rooms = [
       'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/files/f807d719-8662-474e-a966-ad6ca8915603.jpg',
       'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/files/b0fcc61e-5ff3-4e37-ae0e-8a3a013708ef.jpg',
     ],
-    area: 10,
     features: ['Wi-Fi', 'Канцелярия', 'Безопасное пространство', 'Комфортная мебель'],
     price: '450 ₽/час',
     bookingUrl: 'https://n1950266.yclients.com/company/1718101/personal/select-services?o=m4959480'
@@ -151,17 +147,11 @@ export default function Index() {
       <section id="rooms" className="relative py-14 px-4 overflow-hidden bg-black/50 backdrop-blur-sm text-white">
         <div className="container max-w-6xl mx-auto relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Наши кабинеты</h2>
-          <p className="text-center text-muted-foreground mb-8">Выберите подходящее пространство для вашей работы</p>
+          <p className="text-center text-muted-foreground mb-12">Выберите подходящее пространство для вашей работы</p>
           
           <div className="grid md:grid-cols-3 gap-8">
             {rooms.map((room) => (
               <Card key={room.id} className="overflow-hidden hover:shadow-lg transition-shadow">
-                <div className="flex justify-center pt-4 pb-1">
-                  <div className="flex items-center gap-2 bg-white/10 border border-white/20 rounded-xl px-4 py-2 backdrop-blur-sm">
-                    <Icon name="Maximize2" size={16} className="text-primary" />
-                    <span className="text-sm font-semibold text-white">{room.area} м²</span>
-                  </div>
-                </div>
                 <img src={room.image} alt={room.name} className="w-full h-64 object-cover" />
                 <CardHeader>
                   <CardTitle className="flex items-center justify-between">
