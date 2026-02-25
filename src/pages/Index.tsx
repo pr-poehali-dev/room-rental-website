@@ -15,6 +15,7 @@ const rooms = [
       'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/files/3158c0bd-0e0c-498e-b388-4d709466d63c.jpg',
       'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/files/e7b90ffc-6c44-403d-bb5a-8b874cf84514.jpg',
     ],
+    area: 14.5,
     features: ['Wi-Fi', 'Канцелярия', 'Игровая зона', 'Комфортная мебель'],
     price: '450 ₽/час',
     bookingUrl: 'https://n1950266.yclients.com/company/1718101/personal/select-services?o=m4942632'
@@ -29,6 +30,7 @@ const rooms = [
       'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/files/73226305-a7a9-4a6f-b10e-f022accd8694.jpg',
       'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/files/3bf9a16c-59ad-4790-b5ec-49ef9fae6405.jpg',
     ],
+    area: 14,
     features: ['Wi-Fi', 'Канцелярия', 'Комфортная мебель', 'Массажная кушетка'],
     price: '450 ₽/час',
     bookingUrl: 'https://n1950266.yclients.com/company/1718101/personal/select-services?o=m4936259'
@@ -43,6 +45,7 @@ const rooms = [
       'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/files/f807d719-8662-474e-a966-ad6ca8915603.jpg',
       'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/files/b0fcc61e-5ff3-4e37-ae0e-8a3a013708ef.jpg',
     ],
+    area: 10,
     features: ['Wi-Fi', 'Канцелярия', 'Безопасное пространство', 'Комфортная мебель'],
     price: '450 ₽/час',
     bookingUrl: 'https://n1950266.yclients.com/company/1718101/personal/select-services?o=m4959480'
@@ -147,12 +150,30 @@ export default function Index() {
       <section id="rooms" className="relative py-14 px-4 overflow-hidden bg-black/50 backdrop-blur-sm text-white">
         <div className="container max-w-6xl mx-auto relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Наши кабинеты</h2>
-          <p className="text-center text-muted-foreground mb-12">Выберите подходящее пространство для вашей работы</p>
+          <p className="text-center text-muted-foreground mb-8">Выберите подходящее пространство для вашей работы</p>
           
+          <div className="flex justify-center gap-6 mb-12">
+            {rooms.map((room) => (
+              <div key={room.id} className="flex items-center gap-2 bg-white/10 border border-white/20 rounded-xl px-5 py-3 backdrop-blur-sm">
+                <Icon name="LayoutDashboard" size={20} className="text-primary" />
+                <div className="leading-tight">
+                  <p className="text-xs text-white/60">{room.name}</p>
+                  <p className="font-semibold text-white">{room.area} м²</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
           <div className="grid md:grid-cols-3 gap-8">
             {rooms.map((room) => (
               <Card key={room.id} className="overflow-hidden hover:shadow-lg transition-shadow">
-                <img src={room.image} alt={room.name} className="w-full h-64 object-cover" />
+                <div className="relative">
+                  <img src={room.image} alt={room.name} className="w-full h-64 object-cover" />
+                  <div className="absolute top-3 right-3 flex items-center gap-1.5 bg-black/60 backdrop-blur-sm text-white rounded-lg px-3 py-1.5">
+                    <Icon name="LayoutDashboard" size={14} className="text-primary" />
+                    <span className="text-sm font-semibold">{room.area} м²</span>
+                  </div>
+                </div>
                 <CardHeader>
                   <CardTitle className="flex items-center justify-between">
                     <span>{room.name}</span>
