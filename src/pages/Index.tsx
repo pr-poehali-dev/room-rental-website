@@ -152,41 +152,16 @@ export default function Index() {
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Наши кабинеты</h2>
           <p className="text-center text-muted-foreground mb-8">Выберите подходящее пространство для вашей работы</p>
           
-          {(() => {
-            const maxArea = Math.max(...rooms.map(r => r.area));
-            return (
-              <div className="flex justify-center gap-6 mb-12">
-                {rooms.map((room) => (
-                  <div key={room.id} className="flex flex-col gap-2 bg-white/10 border border-white/20 rounded-xl px-5 py-3 backdrop-blur-sm min-w-[130px]">
-                    <div className="flex items-center gap-2">
-                      <Icon name="LayoutDashboard" size={18} className="text-primary" />
-                      <div className="leading-tight">
-                        <p className="text-xs text-white/60">{room.name}</p>
-                        <p className="font-semibold text-white">{room.area} м²</p>
-                      </div>
-                    </div>
-                    <div className="h-1.5 rounded-full bg-white/10 overflow-hidden">
-                      <div
-                        className="h-full rounded-full bg-primary transition-all duration-700"
-                        style={{ width: `${(room.area / maxArea) * 100}%` }}
-                      />
-                    </div>
-                  </div>
-                ))}
-              </div>
-            );
-          })()}
-
           <div className="grid md:grid-cols-3 gap-8">
             {rooms.map((room) => (
               <Card key={room.id} className="overflow-hidden hover:shadow-lg transition-shadow">
-                <div className="relative">
-                  <img src={room.image} alt={room.name} className="w-full h-64 object-cover" />
-                  <div className="absolute top-3 right-3 flex items-center gap-1.5 bg-black/60 backdrop-blur-sm text-white rounded-lg px-3 py-1.5">
-                    <Icon name="LayoutDashboard" size={14} className="text-primary" />
-                    <span className="text-sm font-semibold">{room.area} м²</span>
+                <div className="flex justify-center pt-4 pb-1">
+                  <div className="flex items-center gap-2 bg-white/10 border border-white/20 rounded-xl px-4 py-2 backdrop-blur-sm">
+                    <Icon name="Maximize2" size={16} className="text-primary" />
+                    <span className="text-sm font-semibold text-white">{room.area} м²</span>
                   </div>
                 </div>
+                <img src={room.image} alt={room.name} className="w-full h-64 object-cover" />
                 <CardHeader>
                   <CardTitle className="flex items-center justify-between">
                     <span>{room.name}</span>
