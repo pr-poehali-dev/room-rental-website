@@ -246,7 +246,11 @@ export default function Index() {
                   </Carousel>
                 </div>
                 <div className="flex flex-col justify-center">
-                  <h3 className="text-2xl font-bold mb-4">{room.name}</h3>
+                  <h3 className="text-2xl font-bold mb-2">{room.name}</h3>
+                  <span className="inline-flex items-center gap-1.5 bg-white/10 text-white text-sm font-medium px-3 py-1.5 rounded-full w-fit mb-4">
+                    <Icon name="Maximize2" size={14} className="text-primary" />
+                    {room.area}
+                  </span>
                   <p className="text-muted-foreground mb-4">{room.description}</p>
                   <ul className="space-y-2">
                     {room.features.map((feature, featureIdx) => (
