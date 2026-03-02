@@ -15,6 +15,7 @@ const rooms = [
       'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/bucket/4c35ec1b-ec89-41dd-88c7-4d3c76e6fc65.jpeg',
       'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/bucket/b10116d7-7908-425c-a9c1-c6679cb3d46d.jpg',
     ],
+    area: '14,5 кв м',
     features: ['Wi-Fi', 'Канцелярия', 'Игровая зона', 'Комфортная мебель'],
     price: '450 ₽/час',
     bookingUrl: 'https://n1950266.yclients.com/company/1718101/personal/select-services?o=m4942632'
@@ -29,6 +30,7 @@ const rooms = [
       'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/bucket/a64c25e6-8b8e-4c23-9f70-76179794a97b.JPG',
       'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/bucket/3ed601c6-5a16-41dc-99af-b81714315905.jpg',
     ],
+    area: '14 кв м',
     features: ['Wi-Fi', 'Канцелярия', 'Комфортная мебель', 'Массажная кушетка'],
     price: '450 ₽/час',
     bookingUrl: 'https://n1950266.yclients.com/company/1718101/personal/select-services?o=m4936259'
@@ -43,6 +45,7 @@ const rooms = [
       'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/bucket/51bd9527-6599-4036-86a2-d2393dd32310.jpg',
       'https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/bucket/ae0f9291-a65b-4fae-a2d8-f58630139cd9.jpg',
     ],
+    area: '10 кв м',
     features: ['Wi-Fi', 'Канцелярия', 'Безопасное пространство', 'Комфортная мебель'],
     price: '450 ₽/час',
     bookingUrl: 'https://n1950266.yclients.com/company/1718101/personal/select-services?o=m4959480'
@@ -151,7 +154,14 @@ export default function Index() {
           
           <div className="grid md:grid-cols-3 gap-8">
             {rooms.map((room) => (
-              <Card key={room.id} className="overflow-hidden hover:shadow-lg transition-shadow">
+              <div key={room.id} className="flex flex-col gap-2">
+                <div className="flex justify-start">
+                  <span className="inline-flex items-center gap-1.5 bg-white/90 text-gray-800 text-sm font-medium px-3 py-1.5 rounded-full shadow-sm">
+                    <Icon name="Maximize2" size={14} className="text-primary" />
+                    {room.area}
+                  </span>
+                </div>
+              <Card className="overflow-hidden hover:shadow-lg transition-shadow">
                 <img src={room.image} alt={room.name} className="w-full h-64 object-cover" />
                 <CardHeader>
                   <CardTitle className="flex items-center justify-between">
@@ -178,6 +188,7 @@ export default function Index() {
                   </div>
                 </CardContent>
               </Card>
+              </div>
             ))}
           </div>
         </div>
