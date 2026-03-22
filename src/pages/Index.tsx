@@ -127,7 +127,7 @@ export default function Index() {
                 <Icon name="Clock" size={32} className="text-primary" />
               </div>
               <h3 className="font-semibold">Гибкий график</h3>
-              <p className="text-sm text-muted-foreground">Аренда от 1 часа с 10:00 до 20:00</p>
+              <p className="text-sm text-muted-foreground">Аренда от 1 часа с 10:00 до 22:00</p>
             </div>
             <div className="flex flex-col items-center gap-3">
               <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
