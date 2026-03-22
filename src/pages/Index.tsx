@@ -324,7 +324,7 @@ export default function Index() {
                 <Icon name="Clock" className="text-primary mt-1" size={20} />
                 <div>
                   <p className="font-medium">Режим работы</p>
-                  <p className="text-muted-foreground">Ежедневно с 9:00 до 21:00</p>
+                  <p className="text-muted-foreground">Ежедневно с 10:00 до 22:00</p>
                 </div>
               </div>
             </div>
