@@ -81,7 +81,7 @@ export default function Index() {
 
   return (
     <div className="min-h-screen" style={{backgroundImage: `url('https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/bucket/5196a9d7-1cff-45d5-9e81-612e05c53c1e.jpg')`, backgroundSize: 'cover', backgroundAttachment: 'fixed', backgroundPosition: 'center'}}>
-      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/90">
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-3">
             <img 
@@ -332,7 +332,7 @@ export default function Index() {
         </div>
       </section>
 
-      <footer className="py-12 px-4 border-t bg-gradient-to-r from-green-50/30 to-amber-50/30">
+      <footer className="py-12 px-4 border-t bg-white/90 backdrop-blur-sm">
         <div className="container max-w-6xl mx-auto">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
@@ -356,7 +356,7 @@ export default function Index() {
               </ul>
             </div>
           </div>
-          <div className="border-t pt-6 text-center text-sm text-muted-foreground">
+          <div className="border-t pt-6 text-center text-sm text-foreground/70">
             <p className="mb-2">ИП Ситдигуллина Алиса Айратовна</p>
             <p>ИНН: 165126369283 | ОГРНИП: 324169000045985</p>
             <p className="mt-2">Юридический адрес: 420081, Россия, Республика Татарстан, г. Казань, ул. Патриса Лумумбы, д. 28Б</p>
