@@ -161,7 +161,7 @@ export default function Index() {
                     {room.area}
                   </span>
                 </div>
-              <Card className="overflow-hidden hover:shadow-lg transition-shadow">
+              <Card className="overflow-hidden hover:shadow-lg transition-shadow bg-white/85 backdrop-blur-sm">
                 <img src={room.image} alt={room.name} className="w-full h-64 object-cover" />
                 <CardHeader>
                   <CardTitle className="flex items-center justify-between">
@@ -274,7 +274,7 @@ export default function Index() {
           
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, idx) => (
-              <Card key={idx} className="p-6">
+              <Card key={idx} className="p-6 bg-white/85 backdrop-blur-sm">
                 <div className="flex items-center gap-1 mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Icon key={i} name="Star" size={18} className="text-yellow-500 fill-yellow-500" />
@@ -296,7 +296,7 @@ export default function Index() {
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Контакты</h2>
           <p className="text-center text-muted-foreground mb-12">Свяжитесь с нами удобным способом</p>
           
-          <Card className="p-6 max-w-2xl mx-auto">
+          <Card className="p-6 max-w-2xl mx-auto bg-white/85 backdrop-blur-sm">
             <h3 className="text-xl font-semibold mb-6">Наши контакты</h3>
             <div className="space-y-4">
               <div className="flex items-start gap-3">
