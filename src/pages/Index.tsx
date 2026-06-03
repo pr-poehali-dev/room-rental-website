@@ -121,28 +121,28 @@ export default function Index() {
                 <Icon name="MapPin" size={32} className="text-primary" />
               </div>
               <h3 className="font-semibold">Удобная локация</h3>
-              <p className="text-sm text-muted-foreground">г. Казань, ул. Чистопольская 61Б (вход со двора)</p>
+              <p className="text-sm text-muted-foreground" style={{textShadow: '0 1px 4px rgba(0,0,0,0.7)'}}>г. Казань, ул. Чистопольская 61Б (вход со двора)</p>
             </div>
             <div className="flex flex-col items-center gap-3">
               <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
                 <Icon name="Clock" size={32} className="text-primary" />
               </div>
               <h3 className="font-semibold">Гибкий график</h3>
-              <p className="text-sm text-muted-foreground">Аренда от 1 часа с 10:00 до 22:00</p>
+              <p className="text-sm text-muted-foreground" style={{textShadow: '0 1px 4px rgba(0,0,0,0.7)'}}>Аренда от 1 часа с 10:00 до 22:00</p>
             </div>
             <div className="flex flex-col items-center gap-3">
               <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
                 <Icon name="Shield" size={32} className="text-primary" />
               </div>
               <h3 className="font-semibold">Безопасность</h3>
-              <p className="text-sm text-muted-foreground">Охрана и видеонаблюдение</p>
+              <p className="text-sm text-muted-foreground" style={{textShadow: '0 1px 4px rgba(0,0,0,0.7)'}}>Охрана и видеонаблюдение</p>
             </div>
             <div className="flex flex-col items-center gap-3">
               <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
                 <Icon name="Coffee" size={32} className="text-primary" />
               </div>
               <h3 className="font-semibold">Всё включено</h3>
-              <p className="text-sm text-muted-foreground">Интернет, чай, кофе бесплатно</p>
+              <p className="text-sm text-muted-foreground" style={{textShadow: '0 1px 4px rgba(0,0,0,0.7)'}}>Интернет, чай, кофе бесплатно</p>
             </div>
           </div>
         </div>
@@ -151,7 +151,7 @@ export default function Index() {
       <section id="rooms" className="relative py-14 px-4 overflow-hidden bg-black/50 backdrop-blur-sm text-white">
         <div className="container max-w-6xl mx-auto relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Наши кабинеты</h2>
-          <p className="text-center text-muted-foreground mb-12">Выберите подходящий кабинет для вашей работы</p>
+          <p className="text-center text-muted-foreground mb-12" style={{textShadow: '0 1px 4px rgba(0,0,0,0.7)'}}>Выберите подходящий кабинет для вашей работы</p>
           
           <div className="grid md:grid-cols-3 gap-8">
             {rooms.map((room) => (
@@ -198,7 +198,7 @@ export default function Index() {
       <section id="gallery" className="py-14 px-4 bg-black/50 backdrop-blur-sm text-white">
         <div className="container max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Галерея</h2>
-          <p className="text-center text-muted-foreground mb-12">Фотографии наших кабинетов</p>
+          <p className="text-center text-muted-foreground mb-12" style={{textShadow: '0 1px 4px rgba(0,0,0,0.7)'}}>Фотографии наших кабинетов</p>
           
           <Tabs defaultValue="all" className="w-full">
             <TabsList className="grid w-full max-w-md mx-auto grid-cols-4 mb-8">
@@ -271,7 +271,7 @@ export default function Index() {
       <section id="reviews" className="relative py-14 px-4 overflow-hidden bg-black/50 backdrop-blur-sm text-white">
         <div className="container max-w-6xl mx-auto relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Отзывы</h2>
-          <p className="text-center text-muted-foreground mb-12">Что говорят наши клиенты</p>
+          <p className="text-center text-muted-foreground mb-12" style={{textShadow: '0 1px 4px rgba(0,0,0,0.7)'}}>Что говорят наши клиенты</p>
           
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, idx) => (
@@ -295,7 +295,7 @@ export default function Index() {
       <section id="contacts" className="relative py-14 px-4 overflow-hidden bg-black/50 backdrop-blur-sm text-white">
         <div className="container max-w-4xl mx-auto relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Контакты</h2>
-          <p className="text-center text-muted-foreground mb-12">Свяжитесь с нами удобным способом</p>
+          <p className="text-center text-muted-foreground mb-12" style={{textShadow: '0 1px 4px rgba(0,0,0,0.7)'}}>Свяжитесь с нами удобным способом</p>
           
           <Card className="p-6 max-w-2xl mx-auto bg-white/60 backdrop-blur-sm">
             <h3 className="text-xl font-semibold mb-6">Наши контакты</h3>
