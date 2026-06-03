@@ -311,7 +311,7 @@ export default function Index() {
                 <Icon name="Mail" className="text-primary mt-1" size={20} />
                 <div>
                   <p className="font-medium">Email</p>
-                  <a href="mailto:mind-bloom@ya.ru" className="text-muted-foreground hover:text-primary transition-colors">mind-bloom@ya.ru</a>
+                  <a href="mailto:mind-bloom@yandex.ru" className="text-muted-foreground hover:text-primary transition-colors">mind-bloom@yandex.ru</a>
                 </div>
               </div>
               <div className="flex items-start gap-3">
@@ -338,7 +338,7 @@ export default function Index() {
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
               <h3 className="font-semibold text-lg mb-4">Mind Bloom</h3>
-              <p className="text-sm text-muted-foreground">Аренда кабинетов для психологов в Казани</p>
+              <p className="text-sm text-muted-foreground">Аренда кабинетов для комфортной работы в Казани</p>
             </div>
             <div>
               <h3 className="font-semibold text-lg mb-4">Документы</h3>
@@ -351,8 +351,8 @@ export default function Index() {
             <div>
               <h3 className="font-semibold text-lg mb-4">Контакты</h3>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>+7 (999) 999-99-99</li>
-                <li>info@mindbloom.ru</li>
+                <li>+7 (939) 732-52-70</li>
+                <li>mind-bloom@yandex.ru</li>
                 <li>г. Казань, ул. Чистопольская, 61Б</li>
               </ul>
             </div>
