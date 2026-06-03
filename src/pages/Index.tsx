@@ -113,7 +113,7 @@ export default function Index() {
             <span className="font-normal italic text-3xl md:text-5xl">Пространство развития</span>
           </h1>
           <p className="text-lg md:text-xl text-white/85 mb-12 max-w-3xl mx-auto text-center" style={{fontFamily: "'Playfair Display', serif"}}>
-            Уютное пространство для консультаций и комфортных визитов. Почасовая аренда.
+            Уютные кабинеты для консультаций и комфортных визитов. Почасовая аренда.
           </p>
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div className="flex flex-col items-center gap-3">
