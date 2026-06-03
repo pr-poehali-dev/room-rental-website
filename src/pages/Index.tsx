@@ -110,7 +110,7 @@ export default function Index() {
         <div className="container max-w-6xl mx-auto text-center relative z-10">
           <h1 className="text-4xl md:text-6xl font-bold mb-4 animate-fade-in text-center leading-tight" style={{fontFamily: "'Playfair Display', serif"}}>
             Mind Bloom<br />
-            <span className="font-normal italic">Пространство развития</span>
+            <span className="font-normal italic text-3xl md:text-5xl">Пространство развития</span>
           </h1>
           <p className="text-lg md:text-xl text-white/85 mb-12 max-w-3xl mx-auto text-center" style={{fontFamily: "'Playfair Display', serif"}}>
             Уютное пространство для консультаций и комфортных визитов. Почасовая аренда.
