@@ -108,11 +108,12 @@ export default function Index() {
 
       <section className="relative py-20 px-4 overflow-hidden bg-black/50 backdrop-blur-sm text-white">
         <div className="container max-w-6xl mx-auto text-center relative z-10">
-          <h1 className="text-3xl md:text-5xl font-bold mb-4 animate-fade-in">
-            Mind Bloom — Пространство для психологов
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 animate-fade-in text-center leading-tight" style={{fontFamily: "'Playfair Display', serif"}}>
+            Mind Bloom<br />
+            <span className="font-normal italic">Пространство развития</span>
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-3xl mx-auto">
-            Уютное пространство для консультаций. Почасовая аренда. Всё включено.
+          <p className="text-lg md:text-xl text-white/85 mb-12 max-w-3xl mx-auto text-center" style={{fontFamily: "'Playfair Display', serif"}}>
+            Уютное пространство для консультаций и комфортных визитов. Почасовая аренда.
           </p>
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div className="flex flex-col items-center gap-3">
