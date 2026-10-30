@@ -111,8 +111,8 @@ export default function Index() {
           <a href="https://t.me/AlisaAyratovna" target="_blank" rel="noopener noreferrer" aria-label="Telegram" title="Telegram" className="flex h-10 w-10 items-center justify-center rounded-full hover:scale-110 transition-transform">
             <img src="/telegram.svg" alt="Telegram" className="h-10 w-10" />
           </a>
-          <a href="https://max.ru/u/f9LHodD0cOI4_OtsYGCW1_KwU9yh9RyHyXEMgK-xDKKY7GJtvW5n6nt8--Y" target="_blank" rel="noopener noreferrer" aria-label="MAX" title="MAX" className="flex h-10 w-10 items-center justify-center rounded-full bg-white/15 text-white hover:bg-white/30 transition-colors">
-            <Icon name="MessageCircle" size={20} />
+          <a href="https://max.ru/u/f9LHodD0cOI4_OtsYGCW1_KwU9yh9RyHyXEMgK-xDKKY7GJtvW5n6nt8--Y" target="_blank" rel="noopener noreferrer" aria-label="MAX" title="MAX" className="flex h-10 w-10 items-center justify-center rounded-full hover:scale-110 transition-transform">
+            <img src="https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/bucket/7cb797ce-0af3-48f1-bc41-f6b885725d22.png" alt="MAX" className="h-10 w-10" />
           </a>
           <a href="tel:+79397325270" aria-label="Позвонить" title="Позвонить" className="flex h-10 w-10 items-center justify-center rounded-full bg-white/15 text-white hover:bg-white/30 transition-colors">
             <Icon name="Phone" size={20} />
