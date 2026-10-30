@@ -108,8 +108,8 @@ export default function Index() {
 
       <section className="relative py-20 px-4 overflow-hidden bg-black/50 backdrop-blur-sm text-white">
         <div className="absolute top-4 right-4 z-20 flex items-center gap-3">
-          <a href="https://t.me/AlisaAyratovna" target="_blank" rel="noopener noreferrer" aria-label="Telegram" title="Telegram" className="flex h-10 w-10 items-center justify-center rounded-full bg-white/15 text-white hover:bg-white/30 transition-colors">
-            <Icon name="Send" size={20} />
+          <a href="https://t.me/AlisaAyratovna" target="_blank" rel="noopener noreferrer" aria-label="Telegram" title="Telegram" className="flex h-10 w-10 items-center justify-center rounded-full hover:scale-110 transition-transform">
+            <img src="/telegram.svg" alt="Telegram" className="h-10 w-10" />
           </a>
           <a href="https://max.ru/u/f9LHodD0cOI4_OtsYGCW1_KwU9yh9RyHyXEMgK-xDKKY7GJtvW5n6nt8--Y" target="_blank" rel="noopener noreferrer" aria-label="MAX" title="MAX" className="flex h-10 w-10 items-center justify-center rounded-full bg-white/15 text-white hover:bg-white/30 transition-colors">
             <Icon name="MessageCircle" size={20} />
