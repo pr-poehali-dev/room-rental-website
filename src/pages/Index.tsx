@@ -150,7 +150,7 @@ export default function Index() {
 
       <section id="rooms" className="relative py-14 px-4 overflow-hidden bg-black/50 backdrop-blur-sm text-white">
         <div className="container max-w-6xl mx-auto relative z-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Наши кабинеты</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Кабинеты</h2>
           <p className="text-center text-muted-foreground mb-12" style={{textShadow: '0 1px 4px rgba(0,0,0,0.7)'}}>Выберите подходящий кабинет для вашей работы</p>
           
           <div className="grid md:grid-cols-3 gap-8">
