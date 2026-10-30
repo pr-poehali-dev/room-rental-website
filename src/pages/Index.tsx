@@ -311,11 +311,22 @@ export default function Index() {
           <Card className="p-6 max-w-2xl mx-auto bg-white/60 backdrop-blur-sm">
             <h3 className="text-xl font-semibold mb-6">Наши контакты</h3>
             <div className="space-y-4">
-              <div className="flex items-start gap-3">
+              <div className="flex items-start justify-between gap-3">
                 <Icon name="Phone" className="text-primary mt-1" size={20} />
-                <div>
+                <div className="flex-1">
                   <p className="font-medium">Телефон</p>
                   <a href="tel:+79397325270" className="text-muted-foreground hover:text-primary transition-colors">+7 (939) 732-52-70</a>
+                </div>
+                <div className="flex items-center gap-2 shrink-0">
+                  <a href="https://t.me/AlisaAyratovna" target="_blank" rel="noopener noreferrer" aria-label="Telegram" title="Telegram" className="hover:scale-110 transition-transform">
+                    <img src="/telegram.svg" alt="Telegram" className="h-10 w-10" />
+                  </a>
+                  <a href="https://max.ru/u/f9LHodD0cOI4_OtsYGCW1_KwU9yh9RyHyXEMgK-xDKKY7GJtvW5n6nt8--Y" target="_blank" rel="noopener noreferrer" aria-label="MAX" title="MAX" className="hover:scale-110 transition-transform">
+                    <img src="https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/bucket/7cb797ce-0af3-48f1-bc41-f6b885725d22.png" alt="MAX" className="h-10 w-10" />
+                  </a>
+                  <a href="tel:+79397325270" aria-label="Позвонить" title="Позвонить" className="hover:scale-110 transition-transform">
+                    <img src="/phone.svg" alt="Позвонить" className="h-10 w-10" />
+                  </a>
                 </div>
               </div>
               <div className="flex items-start gap-3">
@@ -338,17 +349,6 @@ export default function Index() {
                   <p className="font-medium">Режим работы</p>
                   <p className="text-muted-foreground">Ежедневно с 10:00 до 22:00</p>
                 </div>
-              </div>
-              <div className="flex items-center gap-3 pt-2">
-                <a href="https://t.me/AlisaAyratovna" target="_blank" rel="noopener noreferrer" aria-label="Telegram" title="Telegram" className="hover:scale-110 transition-transform">
-                  <img src="/telegram.svg" alt="Telegram" className="h-11 w-11" />
-                </a>
-                <a href="https://max.ru/u/f9LHodD0cOI4_OtsYGCW1_KwU9yh9RyHyXEMgK-xDKKY7GJtvW5n6nt8--Y" target="_blank" rel="noopener noreferrer" aria-label="MAX" title="MAX" className="hover:scale-110 transition-transform">
-                  <img src="https://cdn.poehali.dev/projects/ea4d8b0d-a1e8-4e81-a0fc-66a8e70e997f/bucket/7cb797ce-0af3-48f1-bc41-f6b885725d22.png" alt="MAX" className="h-11 w-11" />
-                </a>
-                <a href="tel:+79397325270" aria-label="Позвонить" title="Позвонить" className="hover:scale-110 transition-transform">
-                  <img src="/phone.svg" alt="Позвонить" className="h-11 w-11" />
-                </a>
               </div>
             </div>
           </Card>
