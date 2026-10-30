@@ -33,7 +33,7 @@ const rooms = [
     area: '14 кв м',
     features: ['Wi-Fi', 'Канцелярия', 'Комфортная мебель', 'Массажная кушетка'],
     price: '450 ₽/час',
-    bookingUrl: 'https://n1950266.yclients.ru'
+    bookingUrl: 'https://n1950266.yclients.ru/company/1718101/personal/select-services?o=m4936259'
   },
   {
     id: 3,
@@ -48,7 +48,7 @@ const rooms = [
     area: '10 кв м',
     features: ['Wi-Fi', 'Канцелярия', 'Безопасное пространство', 'Комфортная мебель'],
     price: '450 ₽/час',
-    bookingUrl: 'https://n1950266.yclients.ru'
+    bookingUrl: 'https://n1950266.yclients.ru/company/1718101/personal/select-services?o=m4959480'
   }
 ];
 
