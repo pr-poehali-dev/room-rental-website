@@ -18,7 +18,7 @@ const rooms = [
     area: '14,5 кв м',
     features: ['Wi-Fi', 'Канцелярия', 'Игровая зона', 'Комфортная мебель'],
     price: '450 ₽/час',
-    bookingUrl: 'https://n1950266.yclients.com/company/1718101/personal/select-services?o=m4942632'
+    bookingUrl: 'https://n1950266.yclients.ru'
   },
   {
     id: 2,
@@ -33,7 +33,7 @@ const rooms = [
     area: '14 кв м',
     features: ['Wi-Fi', 'Канцелярия', 'Комфортная мебель', 'Массажная кушетка'],
     price: '450 ₽/час',
-    bookingUrl: 'https://n1950266.yclients.com/company/1718101/personal/select-services?o=m4936259'
+    bookingUrl: 'https://n1950266.yclients.ru'
   },
   {
     id: 3,
@@ -48,7 +48,7 @@ const rooms = [
     area: '10 кв м',
     features: ['Wi-Fi', 'Канцелярия', 'Безопасное пространство', 'Комфортная мебель'],
     price: '450 ₽/час',
-    bookingUrl: 'https://n1950266.yclients.com/company/1718101/personal/select-services?o=m4959480'
+    bookingUrl: 'https://n1950266.yclients.ru'
   }
 ];
 
@@ -98,7 +98,7 @@ export default function Index() {
             <a href="#contacts" className="text-sm font-medium hover:text-primary transition-colors">Контакты</a>
           </nav>
           <Button className="hidden md:flex" asChild>
-            <a href="#rooms">
+            <a href="https://n1950266.yclients.ru" target="_blank" rel="noopener noreferrer">
               <Icon name="Calendar" size={18} className="mr-2" />
               Забронировать
             </a>
